@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 30px;
+}
+p {
+  text-align: justify;
+  font-size: 32px;
+  line-height: 1.8em;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+p::first-letter {
+  color: #2274fb;
+  font-family: "Alex Brush", cursive;
+  font-size: 120px;
+  float: left;
+  padding-top: 0.35em;
+  padding-right: 0.25em;
+}
