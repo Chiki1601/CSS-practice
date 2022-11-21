@@ -1,0 +1,40 @@
+.spinner-1 {
+  margin: 100px auto;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.spinner-1 > div {
+  background-color: #fff;
+  height: 60px;
+  width: 6px;
+  display: inline-block;
+  animation: stretchrect 0.8s infinite ease-in-out;
+}
+
+.spinner-1 .rect1 {
+  animation-delay: -1s;
+}
+.spinner-1 .rect2 {
+  animation-delay: -0.9s;
+}
+.spinner-1 .rect3 {
+  animation-delay: -0.8s;
+}
+.spinner-1 .rect4 {
+  animation-delay: -0.7s;
+}
+.spinner-1 .rect5 {
+  animation-delay: -0.6s;
+}
+
+@keyframes stretchrect {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.8);
+  }
+}

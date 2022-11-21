@@ -1,0 +1,11 @@
+body {
+  background-color: #0dc5c1;
+}
+.container {
+  display: flex;
+}
+
+.container > div {
+  width: 100px;
+  height: 100px;
+}
