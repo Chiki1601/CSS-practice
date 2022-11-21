@@ -1,0 +1,27 @@
+* {
+  font-size: calc(16px * 1);
+}
+
+.mcd {
+  width: 37.5rem;
+  height: 21.2rem;
+  overflow: hidden;
+  position: relative;
+  background-color: #dc0107;
+}
+.mcd:after, .mcd:before {
+  content: "";
+  top: 4rem;
+  position: absolute;
+  border-radius: 50%;
+  width: 8.7rem;
+  height: 26rem;
+}
+.mcd:after {
+  left: 11rem;
+  background-image: conic-gradient(from 90deg at 50% 48%, #dc0107 7%, transparent 7%), linear-gradient(to top, #dc0107 0, #dc0107 48%, transparent 48%), radial-gradient(ellipse 45% 78%, transparent 0, transparent 60%, #ffbb0e 60.2%, #ffbb0e);
+}
+.mcd:before {
+  left: 17.7rem;
+  background-image: linear-gradient(to top, #dc0107 0, #dc0107 48%, transparent 48%), radial-gradient(ellipse 45% 78%, transparent 0, transparent 60%, #ffbb0e 60.2%, #ffbb0e);
+}
