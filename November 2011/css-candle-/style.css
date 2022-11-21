@@ -1,0 +1,212 @@
+:root {
+  --main-candle-color: #7A487A;
+  --melted-candle-color: #935A93;
+  --background-color: #513051;
+  --flame-outer-color: #AD6D38;
+  --flame-inner-color: #E7D622;
+}
+
+body{
+  background: var(--background-color);
+}
+
+.box-canvas{
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  width: 600px;
+  height:600px;
+}
+
+.candle {
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  transform: translate(-50%);
+  height: 150px;
+  width: 150px;
+  background: var(--main-candle-color);
+}
+
+/* Bottom section of candle */
+.candle::after {
+  content: '';
+  width: 150px;
+  height: 40px;
+  background: var(--main-candle-color);
+  border-radius: 50%;
+  bottom: -20px;
+  position: absolute;
+}
+
+/* Top section of candle */
+.candle::before {
+  content: '';
+  position: absolute;
+  top: -28px;
+  width: 130px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--melted-candle-color);
+  border: 10px solid var(--main-candle-color);
+}
+
+.drip {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  width: 5px;
+  height: 50px;
+  background: var(--melted-candle-color);
+  border-radius: 0 0 30% 30%;
+}
+
+.drip::before {
+  content: '';
+  position: absolute;
+  top: 60px;
+  width: 5px;
+  height: 20px;
+  background: var(--melted-candle-color);
+  border-radius: 20% 20% 30% 30%;
+}
+
+.drip::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  width: 5px;
+  height: 120px;
+  background: var(--melted-candle-color);
+  border-radius: 0 0 20% 20%;
+}
+
+.drip-left {
+  position: absolute;
+  left: -5px;
+  height: 165px;
+  background: var(--melted-candle-color);
+  width: 5px;
+  border-radius: 20% 0 20% 20%;
+}
+
+/* Connect inner top to left-hand drip */
+.drip-left::before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: -5px;
+  width: 30px;
+  height: 8px;
+  background: var(--melted-candle-color);
+  border-radius: 50%;
+  transform: rotate(-10deg);
+}
+
+/* Small puddle on left */
+.puddle {
+  position: absolute;
+  top: 290px;
+  left: 180px;
+  width: 90px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--melted-candle-color);
+}
+
+/* Larger puddle */
+.puddle::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: var(--melted-candle-color);
+  width: 180px;
+  height: 45px;
+  left: 25px;
+  top: -8px;
+}
+
+.wick {
+  position: absolute;
+  left: 50%;
+  top: 140px;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 15px;
+  background: black;
+}
+
+/* Convenience class to make moving the flame easier */
+.flame-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(5deg);
+  transform-origin: bottom center;
+  top: 120px;
+  width: 22px;
+  height: 30px;
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  0% {
+    transform: translateX(-50%);
+  }
+  
+  25% {
+    transform: translateX(-50%) rotate(5deg);
+  }
+  
+  75% {
+     transform: translateX(-50%) rotate(-5deg);
+  }
+  
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.flame-inner {
+  position: absolute;
+  left: 50%;
+  top: 7px;
+  transform: translateX(-50%);
+  background: var(--flame-inner-color);
+  width: 15px;
+  height: 20px;
+  border-radius: 50%;
+
+}
+
+.flame-inner::before {
+  content: '';
+  background: var(--flame-inner-color);
+  position: absolute;
+  width: 12px;
+  height: 15px;
+  top: -11px;
+  left: 2px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.flame-outer {
+  position: absolute;
+  background: var(--flame-outer-color);
+  width: 22px;
+  height: 30px;
+  border-radius: 50%;
+
+}
+
+.flame-outer::before {
+  content: '';
+  width: 19px;
+  height: 25px;
+  top: -18px;
+  left: 2px;
+  background: var(--flame-outer-color);
+  position: absolute;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
