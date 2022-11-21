@@ -1,0 +1,463 @@
+* {
+      padding: 0;
+      margin: 0 auto;
+      box-sizing: border-box;
+}
+    
+   body {
+      background:linear-gradient(to top,rgb(167, 87, 221),rgb(127, 223, 114));
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 420px;
+      overflow: hidden;
+    }
+    
+    .flower {
+          margin-inline: inherit;
+          padding: 50px;
+          height: 100px;
+         position: relative;
+         transform-style: preserve-3d;
+        -webkit-animation: rotateFlower 60s infinite linear;
+              animation: rotateFlower 60s infinite linear;
+    }
+
+    @-webkit-keyframes rotateFlower {
+      from {
+            transform: rotateY(0deg);
+          }
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+    @keyframes rotateFlower {
+      from {
+            transform: rotateY(0deg);
+          }
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+    
+    .leaf {
+      position: absolute;
+      height: 120px;
+      transform-origin: top;
+      transform-style: preserve-3d;
+      -webkit-clip-path: polygon(0 100%, 50% 0, 100% 100%, 0 100%);
+              clip-path: polygon(0 100%, 50% 0, 100% 100%, 0 100%);
+      /*background-image: linear-gradient(#000e, #fff1);*/
+      border-radius: 100px;
+      -webkit-animation: leafOpen 12s infinite ease-in-out, LeafWidth 6s infinite alternate ease-in-out;
+              animation: leafOpen 12s infinite ease-in-out, LeafWidth 6s infinite alternate ease-in-out;
+    }
+    .leaf:nth-child(0) {
+      --leafAngle: 0deg;
+      -webkit-animation-delay: 0s;
+              animation-delay: 0s;
+      background-color: pink;
+    }
+    .leaf:nth-child(1) {
+      --leafAngle: 30deg;
+      -webkit-animation-delay: -0.2s;
+              animation-delay: -0.2s;
+      background-color: red;
+    }
+    .leaf:nth-child(2) {
+      --leafAngle: 60deg;
+      -webkit-animation-delay: -0.4s;
+              animation-delay: -0.4s;
+      background-color: blue;
+    }
+    .leaf:nth-child(3) {
+      --leafAngle: 90deg;
+      -webkit-animation-delay: -0.6s;
+              animation-delay: -0.6s;
+      background-color: lime;
+    }
+    .leaf:nth-child(4) {
+      --leafAngle: 120deg;
+      -webkit-animation-delay: -0.8s;
+              animation-delay: -0.8s;
+      background-color: grey;
+    }
+    .leaf:nth-child(5) {
+      --leafAngle: 150deg;
+      -webkit-animation-delay: -1s;
+              animation-delay: -1s;
+      background-color: greenyellow;
+    }
+    .leaf:nth-child(6) {
+      --leafAngle: 180deg;
+      -webkit-animation-delay: -1.2s;
+              animation-delay: -1.2s;
+      background-color: teal;
+    }
+    .leaf:nth-child(7) {
+      --leafAngle: 210deg;
+      -webkit-animation-delay: -1.4s;
+              animation-delay: -1.4s;
+      background-color: tan;
+    }
+    .leaf:nth-child(8) {
+      --leafAngle: 240deg;
+      -webkit-animation-delay: -1.6s;
+              animation-delay: -1.6s;
+      background-color: khaki;
+    }
+    .leaf:nth-child(9) {
+      --leafAngle: 270deg;
+      -webkit-animation-delay: -1.8s;
+              animation-delay: -1.8s;
+      background-color: blueviolet;
+    }
+    .leaf:nth-child(10) {
+      --leafAngle: 300deg;
+      -webkit-animation-delay: -2s;
+              animation-delay: -2s;
+      background-color: lightpink;
+    }
+    .leaf:nth-child(11) {
+      --leafAngle: 330deg;
+      -webkit-animation-delay: -2.2s;
+              animation-delay: -2.2s;
+      background-color: brown;
+    }
+    .leaf:nth-child(12) {
+      --leafAngle: 360deg;
+      -webkit-animation-delay: -2.4s;
+              animation-delay: -2.4s;
+      background-color: honeydew;
+    }
+    .leaf:nth-child(13) {
+      --leafAngle: 390deg;
+      -webkit-animation-delay: -2.6s;
+              animation-delay: -2.6s;
+      background-color: indianred;
+    }
+    .leaf:nth-child(14) {
+      --leafAngle: 420deg;
+      -webkit-animation-delay: -2.8s;
+              animation-delay: -2.8s;
+      background-color: navajowhite;
+    }
+    .leaf:nth-child(15) {
+      --leafAngle: 450deg;
+      -webkit-animation-delay: -3s;
+              animation-delay: -3s;
+      background-color: navy;
+    }
+    .leaf:nth-child(16) {
+      --leafAngle: 480deg;
+      -webkit-animation-delay: -3.2s;
+              animation-delay: -3.2s;
+      background-color: tomato;
+    }
+    .leaf:nth-child(17) {
+      --leafAngle: 510deg;
+      -webkit-animation-delay: -3.4s;
+              animation-delay: -3.4s;
+      background-color: lightseagreen;
+    }
+    .leaf:nth-child(18) {
+      --leafAngle: 540deg;
+      -webkit-animation-delay: -3.6s;
+              animation-delay: -3.6s;
+      background-color: olive;
+    }
+    .leaf:nth-child(19) {
+      --leafAngle: 570deg;
+      -webkit-animation-delay: -3.8s;
+              animation-delay: -3.8s;
+      background-color: orange;
+    }
+    .leaf:nth-child(20) {
+      --leafAngle: 600deg;
+      -webkit-animation-delay: -4s;
+              animation-delay: -4s;
+      background-color: hotpink;
+    }
+    .leaf:nth-child(21) {
+      --leafAngle: 630deg;
+      -webkit-animation-delay: -4.2s;
+              animation-delay: -4.2s;
+      background-color: rebeccapurple;
+    }
+    .leaf:nth-child(22) {
+      --leafAngle: 660deg;
+      -webkit-animation-delay: -4.4s;
+              animation-delay: -4.4s;
+      background-color: turquoise;
+    }
+    .leaf:nth-child(23) {
+      --leafAngle: 690deg;
+      -webkit-animation-delay: -4.6s;
+              animation-delay: -4.6s;
+      background-color: firebrick;
+    }
+    .leaf:nth-child(24) {
+      --leafAngle: 720deg;
+      -webkit-animation-delay: -4.8s;
+              animation-delay: -4.8s;
+      background-color: forestgreen;
+    }
+    .leaf:nth-child(25) {
+      --leafAngle: 750deg;
+      -webkit-animation-delay: -5s;
+              animation-delay: -5s;
+      background-color: skyblue;
+    }
+    .leaf:nth-child(26) {
+      --leafAngle: 780deg;
+      -webkit-animation-delay: -5.2s;
+              animation-delay: -5.2s;
+      background-color: orchid;
+    }
+    .leaf:nth-child(27) {
+      --leafAngle: 810deg;
+      -webkit-animation-delay: -5.4s;
+              animation-delay: -5.4s;
+      background-color:beige;
+    }
+    .leaf:nth-child(28) {
+      --leafAngle: 840deg;
+      -webkit-animation-delay: -5.6s;
+              animation-delay: -5.6s;
+      background-color: darkslateblue;
+    }
+    .leaf:nth-child(29) {
+      --leafAngle: 870deg;
+      -webkit-animation-delay: -5.8s;
+              animation-delay: -5.8s;
+      background-color: skyblue;
+    }
+    .leaf:nth-child(30) {
+      --leafAngle: 900deg;
+      -webkit-animation-delay: -6s;
+              animation-delay: -6s;
+      background-color: blanchedalmond;
+    }
+    .leaf:nth-child(31) {
+      --leafAngle: 930deg;
+      -webkit-animation-delay: -6.2s;
+              animation-delay: -6.2s;
+      background-color: red;
+    }
+    .leaf:nth-child(32) {
+      --leafAngle: 960deg;
+      -webkit-animation-delay: -6.4s;
+              animation-delay: -6.4s;
+      background-color: hotpink;
+    }
+    .leaf:nth-child(33) {
+      --leafAngle: 990deg;
+      -webkit-animation-delay: -6.6s;
+              animation-delay: -6.6s;
+      background-color: blueviolet;
+    }
+    .leaf:nth-child(34) {
+      --leafAngle: 1020deg;
+      -webkit-animation-delay: -6.8s;
+              animation-delay: -6.8s;
+      background-color: royalblue;
+    }
+    .leaf:nth-child(35) {
+      --leafAngle: 1050deg;
+      -webkit-animation-delay: -7s;
+              animation-delay: -7s;
+      background-color: navy;
+    }
+    .leaf:nth-child(36) {
+      --leafAngle: 1080deg;
+      -webkit-animation-delay: -7.2s;
+              animation-delay: -7.2s;
+      background-color: khaki;
+    }
+    .leaf:nth-child(37) {
+      --leafAngle: 1110deg;
+      -webkit-animation-delay: -7.4s;
+              animation-delay: -7.4s;
+      background-color: red;
+    }
+    .leaf:nth-child(38) {
+      --leafAngle: 1140deg;
+      -webkit-animation-delay: -7.6s;
+              animation-delay: -7.6s;
+      background-color: blueviolet;
+    }
+    .leaf:nth-child(39) {
+      --leafAngle: 1170deg;
+      -webkit-animation-delay: -7.8s;
+              animation-delay: -7.8s;
+      background-color: thistle;
+    }
+    .leaf:nth-child(40) {
+      --leafAngle: 1200deg;
+      -webkit-animation-delay: -8s;
+              animation-delay: -8s;
+      background-color: navy;
+    }
+    .leaf:nth-child(41) {
+      --leafAngle: 1230deg;
+      -webkit-animation-delay: -8.2s;
+              animation-delay: -8.2s;
+      background-color: indianred;
+    }
+    .leaf:nth-child(42) {
+      --leafAngle: 1260deg;
+      -webkit-animation-delay: -8.4s;
+              animation-delay: -8.4s;
+      background-color: yellow;
+    }
+    .leaf:nth-child(43) {
+      --leafAngle: 1290deg;
+      -webkit-animation-delay: -8.6s;
+              animation-delay: -8.6s;
+      background-color: khaki;
+    }
+    .leaf:nth-child(44) {
+      --leafAngle: 1320deg;
+      -webkit-animation-delay: -8.8s;
+              animation-delay: -8.8s;
+      background-color: green;
+    }
+    .leaf:nth-child(45) {
+      --leafAngle: 1350deg;
+      -webkit-animation-delay: -9s;
+              animation-delay: -9s;
+      background-color: greenyellow;
+    }
+    .leaf:nth-child(46) {
+      --leafAngle: 1380deg;
+      -webkit-animation-delay: -9.2s;
+              animation-delay: -9.2s;
+      background-color: lightslategray;
+    }
+    .leaf:nth-child(47) {
+      --leafAngle: 1410deg;
+      -webkit-animation-delay: -9.4s;
+              animation-delay: -9.4s;
+      background-color:blue;
+    }
+    .leaf:nth-child(48) {
+      --leafAngle: 1440deg;
+      -webkit-animation-delay: -9.6s;
+              animation-delay: -9.6s;
+      background-color: hotpink;
+    }
+    .leaf:nth-child(49) {
+      --leafAngle: 1470deg;
+      -webkit-animation-delay: -9.8s;
+              animation-delay: -9.8s;
+      background-color:skyblue;
+    }
+    .leaf:nth-child(50) {
+      --leafAngle: 1500deg;
+      -webkit-animation-delay: -10s;
+              animation-delay: -10s;
+      background-color:orchid;
+    }
+    .leaf:nth-child(51) {
+      --leafAngle: 1530deg;
+      -webkit-animation-delay: -10.2s;
+              animation-delay: -10.2s;
+      background-color: indianred;
+    }
+    .leaf:nth-child(52) {
+      --leafAngle: 1560deg;
+      -webkit-animation-delay: -10.4s;
+              animation-delay: -10.4s;
+      background-color: thistle;
+    }
+    .leaf:nth-child(53) {
+      --leafAngle: 1590deg;
+      -webkit-animation-delay: -10.6s;
+              animation-delay: -10.6s;
+      background-color: brown;
+    }
+    .leaf:nth-child(54) {
+      --leafAngle: 1620deg;
+      -webkit-animation-delay: -10.8s;
+              animation-delay: -10.8s;
+      background-color: blueviolet;
+    }
+    .leaf:nth-child(55) {
+      --leafAngle: 1650deg;
+      -webkit-animation-delay: -11s;
+              animation-delay: -11s;
+      background-color: linen;
+    }
+    .leaf:nth-child(56) {
+      --leafAngle: 1680deg;
+      -webkit-animation-delay: -11.2s;
+              animation-delay: -11.2s;
+      background-color: pink;
+    }
+    .leaf:nth-child(57) {
+      --leafAngle: 1710deg;
+      -webkit-animation-delay: -11.4s;
+              animation-delay: -11.4s;
+      background-color: blue;
+    }
+    .leaf:nth-child(58) {
+      --leafAngle: 1740deg;
+      -webkit-animation-delay: -11.6s;
+              animation-delay: -11.6s;
+      background-color: red;
+    }
+    .leaf:nth-child(59) {
+      --leafAngle: 1770deg;
+      -webkit-animation-delay: -11.8s;
+              animation-delay: -11.8s;
+      background-color:rebeccapurple;
+    }
+    .leaf:nth-child(60) {
+      --leafAngle: 1800deg;
+      -webkit-animation-delay: -12s;
+              animation-delay: -12s;
+      background-color: khaki;
+    }
+    @-webkit-keyframes leafOpen {
+      from {
+        transform: translateZ(-30px) rotate(var(--leafAngle)) rotateX(-90deg) rotateY(-15deg);
+      }
+      to {
+        transform: translateZ(30px) rotate(var(--leafAngle)) rotateX(90deg) rotateY(45deg);
+      }
+    }
+    @keyframes leafOpen {
+      from {
+        transform: translateZ(-30px) rotate(var(--leafAngle)) rotateX(-90deg) rotateY(-15deg);
+      }
+      to {
+        transform: translateZ(30px) rotate(var(--leafAngle)) rotateX(90deg) rotateY(45deg);
+      }
+    }
+    @-webkit-keyframes LeafWidth {
+      from {
+        width: 0;
+      }
+      to {
+        width: 60px;
+      }
+    }
+    @keyframes LeafWidth {
+      from {
+        width: 0;
+      }
+      to {
+        width: 60px;
+      }
+    }
+    .a{
+          margin-bottom: 100px;
+          margin-inline: initial;
+          padding: 20px;
+          font-size: 50px;
+          color: rgb(109, 19, 19);
+          font-family: 'Time New Roman',cursive;
+      }
+          
+    
