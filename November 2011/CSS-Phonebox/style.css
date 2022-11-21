@@ -1,0 +1,300 @@
+:root {
+  --red: #EA3F4D;
+  --dark-red: #C41E2E;
+  --gold: #EEAB8C;
+  --glass-color: #C4C0BF;
+  --shadow-color: #7F7A7D;
+}
+
+body{
+  background: #9DD3F2;
+}
+
+.box-canvas{
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  width: 600px;
+  height:600px;
+}
+
+.box-canvas::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #29A415;
+  width: 300px;
+  height: 150px;
+  border-radius: 30% 50%;
+  top: 330px;
+}
+
+.phonebox {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 320px;
+  background: var(--red);
+}
+
+.door {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 295px;
+  border: 2px solid var(--dark-red);
+}
+
+/* Top hinge */
+.hinge {
+  position: absolute;
+  left: -3px;
+  width: 5px;
+  height: 19px;
+  background: repeating-linear-gradient(to bottom,
+    var(--gold),
+    var(--gold) 3px,
+    var(--dark-red) 5px
+  );
+  border-radius: 20%;
+}
+
+/* Middle hinge */
+.hinge::before {
+  content: '';
+  position: absolute;
+  top: 120px;
+  width: 5px;
+  height: 19px;
+  background: repeating-linear-gradient(to bottom,
+    var(--gold),
+    var(--gold) 3px,
+    var(--dark-red) 5px
+  );
+  border-radius: 20%;
+}
+
+/* Bottom hinge */
+.hinge::after {
+  content: '';
+  position: absolute;
+  top: 260px;
+  width: 5px;
+  height: 19px;
+  background: repeating-linear-gradient(to bottom,
+    var(--gold),
+    var(--gold) 3px,
+    var(--dark-red) 5px
+  );
+  border-radius: 20%;
+}
+
+.door-glass {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 170px;
+  background: var(--glass-color);
+  border-left: 10px solid var(--shadow-color);
+  border-right: 10px solid var(--shadow-color);
+  border-top: 30px solid var(--shadow-color);
+  border-bottom: 30px solid var(--shadow-color);
+}
+
+/* Horizontal lines */
+.door-glass::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  width: 80px;
+  height: 230px;
+  background: repeating-linear-gradient(to bottom,
+    transparent,
+    transparent 30px,
+    var(--red) 30px,
+    var(--red) 35px
+  )
+}
+
+/* Vertical lines */
+.door-glass::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  width: 80px;
+  height: 230px;
+  background: linear-gradient(to right,
+    transparent,
+    transparent 15px,
+    var(--red) 15px,
+    var(--red) 20px,
+    transparent 20px,
+    transparent 60px,
+    var(--red) 60px,
+    var(--red) 65px,
+    transparent 65px,
+    transparent
+  );
+}
+
+.kickplate {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 76px;
+  height: 30px;
+  border: 2px solid var(--dark-red);
+  bottom: 5px;
+}
+
+.handle {
+  position: absolute;
+  top: 120px;
+  right: 3px;
+  width: 8px;
+  height: 23px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.header {
+  position: absolute;
+  width: 140px;
+  height: 30px;
+  background: var(--red);
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header::after {
+  content: 'TELEPHONE';
+  position: absolute;
+  font-size: 16px;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: sans-serif;
+  background: white;
+  width: 110px;
+  height: 20px;
+  padding-top: 3px;
+}
+
+.top {
+  position: absolute;
+  height: 50px;
+  top: -80px;
+  width: 150px;
+  background: var(--red);
+  border-radius: 50% 50% 0 0;
+}
+
+/* Inner border */
+.top::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 135px;
+  height: 35px;
+  border: 2px solid var(--dark-red);
+  border-radius: 50% 50% 0 0;
+}
+
+.crown {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+}
+
+/* Curved line at bottom */
+.crown::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 10px;
+  border-top: 2px solid var(--gold);
+  border-radius: 50%;
+  bottom: -8px;
+}
+
+/* Point of crown */
+.crown::after {
+  content: '';
+  left: 50%;
+  top: -5px;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 5px solid var(--gold);
+}
+
+/* Left set of circles */
+.crown-left {
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  transform: rotate(-20deg);
+  transform-origin: bottom right;
+}
+
+.crown-left::before {
+  content: '';
+  position: absolute;
+  background: var(--red);
+  width: 5px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  transform: rotate(20deg);
+  transform-origin: bottom right;
+}
+
+/* Right set of circles */
+.crown-right {
+  position: absolute;
+  left: 11px;
+  width: 5px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  transform: rotate(20deg);
+  transform-origin: bottom left;
+}
+
+.crown-right::before {
+  content: '';
+  position: absolute;
+  background: var(--red);
+  width: 5px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  transform: rotate(-20deg);
+  transform-origin: bottom left;
+  right: 0;
+}
