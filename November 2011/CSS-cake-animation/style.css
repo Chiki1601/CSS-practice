@@ -1,0 +1,151 @@
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #fdbf00;
+}
+.wrapper {
+	width: 320px;
+	height: 470px;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.container {
+	background-color: #ffffff;
+	position: relative;
+	height: 360px;
+	border-radius: 8px;
+	box-shadow: 0 30px 40px rgb(68, 52, 2, 0.3);
+}
+a {
+	display: block;
+	width: 100%;
+	background-color: #ffffff;
+	position: absolute;
+	bottom: 0;
+	padding: 12px 0;
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	text-decoration: none;
+	color: #000000;
+	border-radius: 5px;
+	box-shadow: 0 30px 40px rgb(68, 52, 2, 0.3);
+}
+.cake {
+	width: 100%;
+	position: absolute;
+	bottom: 50px;
+}
+.bottom-layer,
+.top-layer,
+.middle-layer {
+	height: 80px;
+	width: 240px;
+	position: relative;
+	margin: auto;
+	background-repeat: repeat;
+	background-size: 100% 100%, 60px 100px;
+	background-position: 28px 0;
+	background-image: linear-gradient(
+			transparent 50px,
+			#fedbab 50px,
+			#fedbab 60px,
+			transparent 60px
+		),
+		radial-gradient(circle at 30px 5px, #994c10 30px, #fcbf29 31px);
+	border-radius: 10px 10px 0 0;
+}
+.middle-layer {
+	transform: scale(0.85);
+	top: 72px;
+	-webkit-animation: rise-1 2s forwards;
+	animation: rise-1 2s forwards;
+}
+@-webkit-keyframes rise-1 {
+	100% {
+		top: 7px;
+	}
+}
+@keyframes rise-1 {
+	100% {
+		top: 7px;
+	}
+}
+.top-layer {
+	transform: scale(0.7);
+	top: 144px;
+	-webkit-animation: rise-2 2s 2s forwards;
+	animation: rise-2 2s 2s forwards;
+}
+@-webkit-keyframes rise-2 {
+	100% {
+		top: 26px;
+	}
+}
+@keyframes rise-2 {
+	100% {
+		top: 26px;
+	}
+}
+.candle {
+	background: repeating-linear-gradient(
+		45deg,
+		#fd3018 0,
+		#fd3018 5px,
+		#ffa89e 5px,
+		#ffa89e 10px
+	);
+	height: 45px;
+	width: 15px;
+	position: absolute;
+	margin: auto;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	-webkit-animation: rise-3 1s 4s forwards;
+	animation: rise-3 1s 4s forwards;
+}
+@-webkit-keyframes rise-3 {
+	100% {
+		bottom: 202px;
+	}
+}
+@keyframes rise-3 {
+	100% {
+		bottom: 202px;
+	}
+}
+.candle:after {
+	content: "";
+	position: absolute;
+	height: 16px;
+	width: 16px;
+	background-color: #ffb62d;
+	border-radius: 0 50% 50% 50%;
+	transform: scale(0) rotate(45deg);
+	bottom: 50px;
+	left: -0.5px;
+	-webkit-animation: flame 1.5s 5s forwards;
+	animation: flame 1.5s 5s forwards;
+}
+@-webkit-keyframes flame {
+	100% {
+		transform: scale(1) rotate(45deg);
+	}
+}
+@keyframes flame {
+	100% {
+		transform: scale(1) rotate(45deg);
+	}
+}
