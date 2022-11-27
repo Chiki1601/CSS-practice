@@ -1,0 +1,41 @@
+body{background:#fdfdfd}
+*{box-sizing:border-box;}
+*::before, *::after{content:'';position:absolute;}
+
+.ct{margin:100px auto;position:relative;width:300px;height:300px}
+
+/*Blue big circle and it's diameter coordinates*/
+.circle-large{width:300px;height:300px;position:relative;border-radius:100%;border:1px solid #3498db}
+.circle-large::before{background:#3498db;top:50%;width:299px;height:1px;}
+.circle-large::after{background:#3498db;left:50%;top:0;width:1px;height:299px;}
+
+/*Smaller, orange, centered circle*/
+.circle-small{width:148px;height:148px;border-radius:100%;box-shadow:0 0 0 1px #e67e22;position:absolute;top:75px;left:75px;z-index:2;
+animation:counterRotate 8s infinite linear;}
+
+/*Tiny orange circle that spins on circle-small's side*/
+.bullseye{width:11px;height:11px;border:1px solid #e67e22;border-radius:100%;position:absolute;left:50%;margin-left:-5px;margin-top:-6px;
+animation:rotate 4s infinite linear}
+.bullseye::before{width:149px;height:149px;left:-71px;top:-71px;border-radius:100%;border:1px solid #7f8c8d}
+
+  .axis{position:absolute;background:#7f8c8d;border:0;z-index:2;margin:0}
+  .axis.horizontal{top:4px;left:-145px;width:300px;height:1px}
+  .axis.vertical{top:-145px;left:4px;height:300px;width:1px}
+
+  .axis::before,
+  .axis::after{width:9px;height:9px;background:#7f8c8d;border-radius:100%}
+  .axis::before{top:-4px;left:-4px;}
+  .axis::after{bottom:-4px;right:-4px}
+
+  .bullet{width:11px;height:11px;border-radius:100%;border:1px solid #8e44ad;position:absolute;top:69px;left:-5px}
+  .bullet:nth-child(2){top:219px}
+
+/*Orange ellipses*/
+
+.ellipse{border:1px solid #e67e22;position:absolute;border-radius:100%;width:450px;height:150px;top:75px;left:-75px;}
+.ellipse:nth-child(3){transform:rotate(45deg)}
+.ellipse:nth-child(4){transform:rotate(90deg)}
+.ellipse:nth-child(5){transform:rotate(135deg)}
+
+@keyframes counterRotate { to{transform: rotate(-360deg)} }
+@keyframes rotate { to{transform: rotate(360deg)} }
