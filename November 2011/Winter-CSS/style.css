@@ -1,0 +1,626 @@
+body {
+  background: #336E7B;
+}
+
+.scene {
+  position: relative;
+  background-color: #0A3945;
+  margin: auto;
+  width: 700px;
+  height: 400px;
+  background: linear-gradient(to bottom, #0A3945 0%, #135E70 100%);
+  overflow: hidden;
+}
+
+.window .windowFrame .w1, .window .windowFrame, .window {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.snowman:after, .snowman:before, .snowman {
+  box-shadow: -1px 0px 6px 1px #DDDDDD;
+  -webkit-box-shadow: -1px 0px 6px 1px #DDDDDD;
+  -moz-box-shadow: -1px 0px 6px 1px #DDDDDD;
+  -o-box-shadow: -1px 0px 6px 1px #DDDDDD;
+}
+
+.snowflakes span.snowflake1 {
+  -webkit-box-shadow: 0px 0px 10px 0px white;
+  -moz-box-shadow: 0px 0px 10px 0px white;
+  box-shadow: 0px 0px 10px 0px white;
+}
+
+.snowflakes span.snowflake2 {
+  -webkit-box-shadow: 0px 0px 5px 0px #f0f0f0;
+  -moz-box-shadow: 0px 0px 5px 0px #f0f0f0;
+  box-shadow: 0px 0px 5px 0px #f0f0f0;
+}
+
+.window {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 6px 16px 1px #878585;
+  -webkit-box-shadow: 5px 6px 16px 1px #878585;
+  -moz-box-shadow: 5px 6px 16px 1px #878585;
+  -o-box-shadow: 5px 6px 16px 1px #878585;
+  border: 8px solid #fff;
+}
+.window .windowFrame {
+  width: calc(50% - 2px);
+  height: 100%;
+  border: 4px solid #ededed;
+  float: left;
+}
+.window .windowFrame .w1 {
+  width: 50%;
+  height: 50%;
+  float: left;
+  border: 2px solid #e0e0e0;
+}
+.window .windowSep {
+  float: left;
+  width: 4px;
+  height: 100%;
+  background: #fff;
+}
+.window .windowFrameSh {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  box-shadow: inset 5px 4px 6px 0px #999999;
+  -webkit-box-shadow: inset 5px 4px 6px 0px #999999;
+  -moz-box-shadow: inset 5px 4px 6px 0px #999999;
+  -o-box-shadow: inset 5px 4px 6px 0px #999999;
+}
+
+.ground {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  bottom: 0;
+}
+.ground .g {
+  width: 400px;
+  height: 100%;
+  background: #fff;
+  border: solid 5px #fff;
+  border-color: #fff transparent transparent transparent;
+  border-radius: 50%/100px 100px 0 0;
+  left: -50px;
+  position: absolute;
+  float: left;
+}
+.ground .g.g2 {
+  left: 200px;
+}
+.ground .g.g3 {
+  left: 380px;
+  top: -40px;
+  height: 200px;
+}
+
+.snowman {
+  width: 130px;
+  height: 115px;
+  background: #fff;
+  position: absolute;
+  border-radius: 100%;
+  bottom: 60px;
+  left: 70px;
+}
+
+.snowman:before {
+  content: "";
+  width: 100px;
+  height: 90px;
+  background: #fff;
+  position: absolute;
+  border-radius: 100%;
+  bottom: 80px;
+  left: 15px;
+}
+
+.snowman:after {
+  content: "";
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  position: absolute;
+  border-radius: 100%;
+  bottom: 150px;
+  left: 30px;
+}
+
+.buttons {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #000;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.buttons.b1 {
+  bottom: 50px;
+}
+
+.buttons.b2 {
+  bottom: 90px;
+}
+
+.buttons.b3 {
+  bottom: 125px;
+}
+
+.buttons.b4 {
+  z-index: 999;
+  position: relative;
+  top: -85px;
+  left: -10px;
+}
+
+.buttons.b5 {
+  z-index: 999;
+  position: relative;
+  top: -95px;
+  left: 13px;
+}
+
+.mouth {
+  position: absolute;
+  width: 40px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 25px;
+  top: -80px;
+  z-index: 999;
+  position: relative;
+}
+.mouth .m {
+  width: 6px;
+  height: 6px;
+  display: block;
+  background: #000;
+  border-radius: 100%;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mouth .m.m2 {
+  left: 10px;
+  top: 5px;
+}
+.mouth .m.m3 {
+  left: 20px;
+  top: 7px;
+}
+.mouth .m.m4 {
+  left: 30px;
+  top: 5px;
+}
+.mouth .m.m5 {
+  left: 40px;
+  top: 0px;
+}
+
+.nose {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 0 6px 40px;
+  border-color: transparent transparent transparent #e67e22;
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+  position: absolute;
+  margin: auto;
+  left: 0px;
+  right: -40px;
+  top: -70px;
+  z-index: 999;
+}
+
+.hat {
+  position: absolute;
+  z-index: 888;
+  height: 35px;
+  width: 60px;
+  border-radius: 60px 60px 0 0;
+  -moz-border-radius: 60px 60px 0 0;
+  -webkit-border-radius: 60px 60px 0 0;
+  background: #c0392b;
+  top: -132px;
+  right: 42px;
+  -ms-transform: rotate(-10deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-10deg);
+  /* Safari */
+  transform: rotate(-10deg);
+}
+
+.hat:after {
+  position: ABSOLUTE;
+  display: block;
+  content: " ";
+  width: 54px;
+  height: 0px;
+  border: solid 6px #E66053;
+  border-radius: 3px;
+  bottom: -5px;
+  left: -2px;
+  -webkit-box-shadow: 0px -30px 33px -9px #f0f0f0;
+  -moz-box-shadow: 0px -30px 33px -9px #f0f0f0;
+  box-shadow: 0px -1px 3px 0px #f0f0f0;
+}
+
+.hat:before {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #fff;
+  top: -13px;
+  right: 25px;
+  -webkit-box-shadow: 0px 0px 3px 1px #f0f0f0;
+  -moz-box-shadow: 0px 0px 3px 1px #f0f0f0;
+  box-shadow: 0px 0px 3px 1px #f0f0f0;
+}
+
+.tree {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent #23915b transparent;
+}
+.tree .snow {
+  oz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: -2px 2px 0 0 white, 2px 2px 0 0 white, -3px 3px 0 0 white, 3px 3px 0 0 white, -12px 14px 0 0 white, -13px 17px 0 1px white, -16px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 11px 14px 0 1px white, 13px 17px 0 1px white, 15px 19px 0 0 white;
+  -webkit-box-shadow: -2px 2px 0 0 white, 2px 2px 0 0 white, -3px 3px 0 0 white, 3px 3px 0 0 white, -12px 14px 0 0 white, -13px 17px 0 1px white, -16px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 11px 14px 0 1px white, 13px 17px 0 1px white, 15px 19px 0 0 white;
+  box-shadow: -2px 2px 0 0 white, 2px 2px 0 0 white, -3px 3px 0 0 white, 3px 3px 0 0 white, -12px 14px 0 0 white, -13px 17px 0 1px white, -16px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 11px 14px 0 1px white, 13px 17px 0 1px white, 15px 19px 0 0 white;
+  position: absolute;
+  top: 1px;
+  left: -3px;
+  width: 6px;
+  height: 6px;
+  background: white;
+  z-index: 1;
+}
+.tree .snow:after {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: -15px 14px 0 0 white, -15px 17px 0 1px white, -18px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 12px 17px 0 3px white, 16px 17px 0 1px white, 18px 19px 0 0 white, 11px 20px 0 1px white, 16px 20px 0 1px white, -12px 34px 0 0 white, -18px 34px 0 0 white, -19px 36px 0 1px white, -22px 36px 0 2px white, -24px 37px 0 2px white, -13px 37px 0 1px white, -16px 39px 0 0 white, -9px 36px 0 0 white, -5px 35px 0 2px white, -9px 33px 0 0 white, -2px 36px 0 2px white, 12px 34px 0 0 white, 13px 37px 0 1px white, 16px 39px 0 0 white, 9px 36px 0 0 white, 5px 35px 0 2px white, 9px 33px 0 0 white, 17px 35px 0 2px white, 17px 37px 0 1px white, 18px 35px 0 2px white, 20px 36px 0 2px white, 23px 37px 0 2px white;
+  -webkit-box-shadow: -15px 14px 0 0 white, -15px 17px 0 1px white, -18px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 12px 17px 0 3px white, 16px 17px 0 1px white, 18px 19px 0 0 white, 11px 20px 0 1px white, 16px 20px 0 1px white, -12px 34px 0 0 white, -18px 34px 0 0 white, -19px 36px 0 1px white, -22px 36px 0 2px white, -24px 37px 0 2px white, -13px 37px 0 1px white, -16px 39px 0 0 white, -9px 36px 0 0 white, -5px 35px 0 2px white, -9px 33px 0 0 white, -2px 36px 0 2px white, 12px 34px 0 0 white, 13px 37px 0 1px white, 16px 39px 0 0 white, 9px 36px 0 0 white, 5px 35px 0 2px white, 9px 33px 0 0 white, 17px 35px 0 2px white, 17px 37px 0 1px white, 18px 35px 0 2px white, 20px 36px 0 2px white, 23px 37px 0 2px white;
+  box-shadow: -15px 14px 0 0 white, -15px 17px 0 1px white, -18px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 12px 17px 0 3px white, 16px 17px 0 1px white, 18px 19px 0 0 white, 11px 20px 0 1px white, 16px 20px 0 1px white, -12px 34px 0 0 white, -18px 34px 0 0 white, -19px 36px 0 1px white, -22px 36px 0 2px white, -24px 37px 0 2px white, -13px 37px 0 1px white, -16px 39px 0 0 white, -9px 36px 0 0 white, -5px 35px 0 2px white, -9px 33px 0 0 white, -2px 36px 0 2px white, 12px 34px 0 0 white, 13px 37px 0 1px white, 16px 39px 0 0 white, 9px 36px 0 0 white, 5px 35px 0 2px white, 9px 33px 0 0 white, 17px 35px 0 2px white, 17px 37px 0 1px white, 18px 35px 0 2px white, 20px 36px 0 2px white, 23px 37px 0 2px white;
+  content: " ";
+  position: absolute;
+  top: 14px;
+  left: 0px;
+  width: 6px;
+  height: 6px;
+  background: white;
+  z-index: 1;
+}
+
+.tree:before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent #23915b transparent;
+}
+
+.tree:after {
+  content: " ";
+  position: absolute;
+}
+
+.tree.one {
+  right: 28px;
+  bottom: 170px;
+  border-width: 0 28px 40px 28px;
+}
+
+.tree.one:before {
+  top: 15px;
+  left: -35px;
+  border-width: 0 37px 50px 37px;
+}
+
+.tree.one:after {
+  width: 15px;
+  height: 20px;
+  background: #38230e;
+  bottom: -85px;
+  left: -7px;
+}
+
+.tree.two {
+  right: 80px;
+  bottom: 160px;
+  border-width: 0 30px 40px 30px;
+}
+
+.tree.two:before {
+  top: 17px;
+  left: -45px;
+  border-width: 0 45px 55px 45px;
+}
+
+.tree.two:after {
+  width: 17px;
+  height: 25px;
+  background: #38230e;
+  bottom: -95px;
+  left: -7px;
+}
+
+.tree.three {
+  right: 150px;
+  bottom: 180px;
+  border-width: 0 30px 40px 30px;
+}
+
+.tree.three:before {
+  top: 17px;
+  left: -45px;
+  border-width: 0 45px 55px 45px;
+}
+
+.tree.three:after {
+  width: 17px;
+  height: 25px;
+  background: #38230e;
+  bottom: -97px;
+  left: -7px;
+}
+
+.snowflakes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  overflow: hidden;
+}
+.snowflakes .snowRow {
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  top: -25%;
+}
+.snowflakes .sr1 {
+  -webkit-animation: snow1 10s linear infinite;
+  -moz-animation: snow1 10s linear infinite;
+  -ms-animation: snow1 10s linear infinite;
+  animation: snow1 10s linear infinite;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.snowflakes .sr2 {
+  -webkit-animation: snow1 10s linear infinite;
+  -moz-animation: snow1 10s linear infinite;
+  -ms-animation: snow1 10s linear infinite;
+  animation: snow1 10s linear infinite;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -ms-animation-delay: 2s;
+  animation-delay: 2s;
+}
+.snowflakes .sr3 {
+  -webkit-animation: snow1 10s linear infinite;
+  -moz-animation: snow1 10s linear infinite;
+  -ms-animation: snow1 10s linear infinite;
+  animation: snow1 10s linear infinite;
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -ms-animation-delay: 4s;
+  animation-delay: 4s;
+}
+.snowflakes .sr4 {
+  -webkit-animation: snow1 10s linear infinite;
+  -moz-animation: snow1 10s linear infinite;
+  -ms-animation: snow1 10s linear infinite;
+  animation: snow1 10s linear infinite;
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  -ms-animation-delay: 6s;
+  animation-delay: 6s;
+}
+.snowflakes .sr5 {
+  -webkit-animation: snow1 10s linear infinite;
+  -moz-animation: snow1 10s linear infinite;
+  -ms-animation: snow1 10s linear infinite;
+  animation: snow1 10s linear infinite;
+  -webkit-animation-delay: 8s;
+  -moz-animation-delay: 8s;
+  -ms-animation-delay: 8s;
+  animation-delay: 8s;
+}
+.snowflakes .sr6 {
+  -webkit-animation: snow2 10s linear infinite;
+  -moz-animation: snow2 10s linear infinite;
+  -ms-animation: snow2 10s linear infinite;
+  animation: snow2 10s linear infinite;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.snowflakes .sr7 {
+  -webkit-animation: snow2 10s linear infinite;
+  -moz-animation: snow2 10s linear infinite;
+  -ms-animation: snow2 10s linear infinite;
+  animation: snow2 10s linear infinite;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -ms-animation-delay: 2s;
+  animation-delay: 2s;
+}
+.snowflakes .sr8 {
+  -webkit-animation: snow2 10s linear infinite;
+  -moz-animation: snow2 10s linear infinite;
+  -ms-animation: snow2 10s linear infinite;
+  animation: snow2 10s linear infinite;
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -ms-animation-delay: 4s;
+  animation-delay: 4s;
+}
+.snowflakes .sr9 {
+  -webkit-animation: snow2 10s linear infinite;
+  -moz-animation: snow2 10s linear infinite;
+  -ms-animation: snow2 10s linear infinite;
+  animation: snow2 10s linear infinite;
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  -ms-animation-delay: 6s;
+  animation-delay: 6s;
+}
+.snowflakes .sr10 {
+  -webkit-animation: snow2 10s linear infinite;
+  -moz-animation: snow2 10s linear infinite;
+  -ms-animation: snow2 10s linear infinite;
+  animation: snow2 10s linear infinite;
+  -webkit-animation-delay: 8s;
+  -moz-animation-delay: 8s;
+  -ms-animation-delay: 8s;
+  animation-delay: 8s;
+}
+.snowflakes span.snowflake1 {
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+.snowflakes span.snowflake2 {
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(240, 240, 240, 0.8);
+}
+
+@keyframes snow1 {
+  0% {
+    top: -25%;
+    left: 0;
+  }
+  40% {
+    left: 30px;
+  }
+  100% {
+    top: 100%;
+    left: 0;
+  }
+}
+@-moz-keyframes snow1 {
+  0% {
+    top: -25%;
+    left: 0;
+  }
+  40% {
+    left: 30px;
+  }
+  100% {
+    top: 100%;
+    left: 0;
+  }
+}
+@-webkit-keyframes snow1 {
+  0% {
+    top: -25%;
+    left: 0;
+  }
+  40% {
+    left: 30px;
+  }
+  100% {
+    top: 100%;
+    left: 0;
+  }
+}
+@-ms-keyframes snow1 {
+  0% {
+    top: -25%;
+    left: 0;
+  }
+  40% {
+    left: 30px;
+  }
+  100% {
+    top: 100%;
+    left: 0;
+  }
+}
+@keyframes snow2 {
+  0% {
+    top: -25%;
+    right: 0;
+  }
+  30% {
+    right: 60px;
+  }
+  30% {
+    right: 40px;
+  }
+  100% {
+    top: 100%;
+    right: 0;
+  }
+}
+@-moz-keyframes snow2 {
+  0% {
+    top: -25%;
+    right: 0;
+  }
+  40% {
+    right: 30px;
+  }
+  100% {
+    top: 100%;
+    right: 0;
+  }
+}
+@-webkit-keyframes snow2 {
+  0% {
+    top: -25%;
+    right: 0;
+  }
+  40% {
+    right: 30px;
+  }
+  100% {
+    top: 100%;
+    right: 0;
+  }
+}
+@-ms-keyframes snow2 {
+  0% {
+    top: -25%;
+    right: 0;
+  }
+  40% {
+    right: 30px;
+  }
+  100% {
+    top: 100%;
+    right: 0;
+  }
+}
