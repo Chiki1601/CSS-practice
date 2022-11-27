@@ -1,0 +1,190 @@
+:root {
+	--h: 344;
+	--s: 76%;
+	--l: 42%;
+	--r: 0deg;
+	--tx: 0;
+	--ty: 0;
+}
+body {
+	background-color: hsl(var(--h), var(--s), var(--bl, 95%));
+	margin: unset;
+	padding: unset;
+	transition: background-color .3s ease-in-out;
+}
+.menu {
+	margin: 0 auto;
+	position: relative;
+	width: 80vw;
+}
+.menu-item {
+	--h1: var(--h);
+	--s1: var(--s);
+	--l1: var(--l);
+	--bg: hsl(var(--h1), var(--s1), var(--l1));
+
+	aspect-ratio: 3.8 / 1;
+	background-color: var(--bg);
+	box-sizing: border-box;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+	text-transform: uppercase;
+	transform: rotate(var(--r)) translate(var(--tx), var(--ty));
+	width: 73.75%;
+}
+.mi1 {
+	--h1: calc(var(--h) + 26);
+	--s1: calc(var(--s) + 5%);
+	--l1: calc(var(--l) + 27%);
+	--r: -4deg;
+	--tx: 13%;
+	--ty: 35%;
+}
+.mi2 {
+	--h1: calc(var(--h) + 26);
+	--s1: calc(var(--s) + 1%);
+	--l1: calc(var(--l) + 12%);
+	--r: 4deg;
+	--tal: start;
+	--tx: 20%;
+	--ty: 8%;
+}
+.mi3 {
+	--h1: calc(var(--h) + 14);
+	--s1: calc(var(--s) - 3%);
+	--l1: calc(var(--l) + 19%); 
+	--r: -2deg;
+	--tx: 24%;
+	--ty: 40%;
+}
+.mi4 {
+	--h1: calc(var(--h) + 15);
+	--s1: calc(var(--s) - 9%);
+	--l1: calc(var(--l) + 4%);
+	--r: -2.5deg;
+	--tal: start;
+	--tx: 2%;
+	--ty: -2%;
+}
+.mi5 {
+	--h1: calc(var(--h) + 12);
+	--s1: calc(var(--s) + 3%);
+	--l1: calc(var(--l) + 29%);
+	--r: 12deg;
+	--tal: start;
+	--tx: 34%;
+	--ty: -42%;
+}
+.mi6 {
+	--h1: calc(var(--h) + 8);
+	--s1: calc(var(--s) - 33%);
+	--l1: calc(var(--l) + 12%);
+	--r: 0.51deg;
+	--tx: 39%;
+	--ty: -42%;
+}
+.mi7 {
+	--h1: calc(var(--h) + 27);
+	--s1: calc(var(--s) + 7%);
+	--l1: calc(var(--l) + 13%);
+	--r: 0deg;
+	--tal: start;
+	--tx: 24%;
+	--ty: -80%;
+	position: relative;
+	z-index: 1;
+}
+.mi8 {
+	--r: 4.5deg;
+	--tx: 13%;
+	--ty: -110%;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+@supports not (aspect-ratio: 1 / 1) {
+	.menu-item {
+		height: 15.5363vw;
+	}
+}
+
+.dm {
+	position: absolute;
+	left: 2rem;
+	top: 4rem;
+}
+
+.r {
+	--rng-thumb-bdrs: 50%;
+	--rng-thumb-bxsh: inset 0 0 0 0.125rem rgba(255, 255, 255, 0.8);
+	--rng-thumb-bxsh--focus: inset 0 0 0 0.125rem var(--c0), 0 0 0 0.125rem  rgba(255, 255, 255, 0.8);
+	--rng-thumb-h: 2rem;
+	--rng-thumb-w: 2rem;
+
+	background-image: var(--rng-bgi, inherit);
+	border-radius: var(--rng-bdrs, 0);
+	font-family: inherit;
+	height: var(--rng-h);
+	margin: var(--rng-m, 0);
+	outline: 0.25rem solid transparent;
+	position: relative;
+	touch-action: none;
+	width: 100%;
+}
+.r--h {
+	--rng-bgi: linear-gradient(to right, 
+	hsla(0, var(--s), 50%, 0.8), 
+	hsla(30, var(--s), 50%, 0.8), 
+	hsla(60, var(--s), 50%, 0.8), 
+	hsla(90, var(--s), 50%, 0.8), 
+	hsla(120, var(--s), 50%, 0.8), 
+	hsla(150, var(--s), 50%, 0.8), 
+	hsla(180, var(--s), 50%, 0.8), 
+	hsla(210, var(--s), 50%, 0.8), 
+	hsla(240, var(--s), 50%, 0.8), 
+	hsla(270, var(--s), 50%, 0.8), 
+	hsla(300, var(--s), 50%, 0.8), 
+	hsla(330, var(--s), 50%, 0.8),
+	hsla(360, var(--s), 50%, 0.8)
+	);
+	--rng-thumb-bgc: hsl(var(--h), var(--s), 50%);
+}
+.r::-moz-range-thumb {
+	background-color: var(--rng-thumb-bgc);
+	border-radius: var(--rng-thumb-bdrs);
+	box-shadow: var(--rng-thumb-bxsh);
+	color: #000;
+	cursor: ew-resize;
+	height: var(--rng-thumb-h);  
+	margin-top: calc(0px - ((var(--rng-thumb-h) - var(--rng-h)) / 2));
+	position: relative;
+	width: var(--rng-thumb-w);
+}
+.r::-webkit-slider-thumb {
+	background-color: var(--rng-thumb-bgc);
+	border-radius: var(--rng-thumb-bdrs);
+	box-shadow: var(--rng-thumb-bxsh);
+	cursor: ew-resize;
+	height: var(--rng-thumb-h);  
+	margin-top: calc(0px - ((var(--rng-thumb-h) - var(--rng-h)) / 2));
+	position: relative;
+	width: var(--rng-thumb-w);
+}
+.r:focus-visible::-webkit-slider-thumb {
+	box-shadow: var(--rng-thumb-bxsh--focus);
+}
+.r::-moz-range-track {
+	background: transparent;
+	background-size: 100%;
+	height: var(--rng-h);
+}
+.r::-webkit-slider-runnable-track {
+	background: transparent;
+	background-size: 100%;
+	height: var(--rng-h);
+}
+.r,
+.r::-webkit-slider-runnable-track,
+.r::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+}
