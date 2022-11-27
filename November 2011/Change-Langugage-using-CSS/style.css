@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Bellota&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bellota', cursive;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ebf5fc;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    max-width: 500px;
+    height: auto;
+    padding: 50px;
+    color: #000;
+    border-radius: 20px;
+    box-shadow: -5px -5px 15px rgba(255,255,255,0.6),
+                5px 5px 10px rgba(0,0,0,0.1);
+}
+.container span{
+    position: relative;
+    left: 70%;
+    top: 0;
+    color: #63cdda;
+}
+.change{
+    position: relative;
+    top: -5px;
+    width: 50px;
+    left: 70%;
+}
+.change:before{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: #333;
+    border-radius: 25px;
+}
+.change:checked:before{
+    background: #333;
+}
+.change:after{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.4s;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+.change:checked:after{
+    border: 2px solid #333;
+    left: 25px;
+}
+.container .content{
+    display: none;
+}
+.container .content h1{
+    text-align: center;
+    padding: 30px 0px 25px 0px;
+    font-size: 30px;
+}
+.container .content p{
+    font-size: 24px;
+    text-align: justify;
+}
+.container .content.English{
+    display: block;
+}
+.change:checked ~ .content.English{
+    display: none;
+}
+.change:checked ~ .content.Polski{
+    display: block;
+}
