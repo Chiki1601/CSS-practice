@@ -1,0 +1,54 @@
+body {
+  background: #111;
+}
+
+.book {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 15px solid #DD2C00;
+  width: 200px;
+  height: 250px;
+  background: #EF6C00;
+  color: white;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: 900;
+  text-align: center;
+}
+
+.css-image {
+  width: 150px;
+}
+
+.side {
+  position: relative;
+  top: -275px;
+  left: -48px;
+  background: linear-gradient(to left, #EF6C00 20%, #BF360C);
+  height: 119%;
+  width: 20%;
+  transform: rotateY(50deg);
+}
+
+.side:before {
+  content: "";
+  display: block;
+  width: 370px;
+  height: 5%;
+  background: #EF6C00;
+  position: relative;
+  top: -5px;
+  left: 30px;
+}
+
+.top {
+  position: relative;
+  top: -576px;
+  left: -20px;
+  width: 118%;
+  height: 10%;
+  background-image: repeating-linear-gradient(white, black 10%);
+  transform: rotateX(40deg);
+}
