@@ -1,0 +1,71 @@
+body {
+  background: lightcyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.popsicle {
+  width: 300px;
+  height: 300px;
+  margin: 20vh 20px;
+  display: inherit;
+  flex-direction: column;
+  align-items: inherit;
+  justify-content: inherit;
+}
+
+.stick {
+  width: 20px;
+  height: 80px;
+  background: peachpuff;
+  border-radius: 0 0 40% 40%/0 0 10% 10%;
+  box-shadow: 2px 0 2px rgba(244, 164, 96, 0.6);
+}
+
+.ice {
+  width: 100px;
+  height: 180px;
+  box-shadow: inset 10px 5px 20px rgba(255, 255, 255, 0.6), inset -1px 0px 10px rgba(2, 2, 2, 0.2);
+}
+
+.tricolore .ice {
+  background: linear-gradient(to bottom, gold 33%, salmon 33% 66%, crimson 66%);
+  border-radius: 50% 50% 20% 20%/40% 40% 10% 10%;
+}
+
+.stripes .ice {
+  background: linear-gradient(160deg, crimson 10%, pink 10% 20%, crimson 20% 30%, pink 30% 40%, crimson 40% 50%, pink 50% 60%, crimson 60% 70%, pink 70% 80%, crimson 80% 90%, pink 90%);
+  border-radius: 40% 40% 20% 20%/30% 30% 10% 10%;
+}
+
+.citrus .ice {
+  background: gold;
+  border-radius: 30% 30% 20% 20%/20% 20% 10% 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.citrus .ice .groove {
+  width: 10px;
+  height: 120px;
+  background: goldenrod;
+  border-radius: 50%/5%;
+  box-shadow: inset 2px 2px 3px rgba(184, 134, 11, 0.6);
+}
+
+.milky .ice {
+  background: seashell;
+  border-radius: 40% 40% 20% 20%/30% 30% 10% 10%;
+}
+.milky .ice .bite {
+  width: 50px;
+  height: 40px;
+  border-radius: 0 380% 0 400%/0 440% 0 400%;
+  background: crimson;
+  opacity: 0.5;
+  position: relative;
+  left: 47px;
+  box-shadow: inset 1px -2px 3px rgba(2, 2, 2, 0.2);
+}
