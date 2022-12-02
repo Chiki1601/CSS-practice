@@ -1,0 +1,31 @@
+body {
+	font-family: Calibri, Arial, sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+    background-color: #000;
+    color: #000;
+    overflow: hidden;
+    user-select: none;
+}
+
+p {
+	margin: 0;
+    cursor: default;
+	font-size: 12px;
+	line-height: 12px;
+	background-image: url(https://res.cloudinary.com/dicuo7jty/image/upload/v1555090288/experiments/srk.png);    
+    background-attachment: fixed; 
+    background-position: center bottom;
+    background-repeat: repeat-x; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255,255,255,0);
+}
+
+@media (max-width : 767px) {
+	p {
+		background-position: center center;
+		background-size: 750px 234px;
+	}
+}
