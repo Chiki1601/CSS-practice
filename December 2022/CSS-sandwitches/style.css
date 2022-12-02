@@ -1,0 +1,614 @@
+@import url("https://fonts.googleapis.com/css?family=Cute+Font&display=swap");
+.container {
+  position: relative;
+  width: 530px;
+  height: 200px;
+  margin: auto;
+  top: calc(50% - 100px);
+}
+
+.sandwich {
+  left: 0px;
+  top: 50px;
+  position: absolute;
+  transform: scale(0.3);
+  transition: 1s;
+}
+.sandwich:hover .sandwich__bread {
+  cursor: pointer;
+  transform: skew(60deg, -20deg);
+  transition: 1s;
+  border-width: 0 7px 6px 15px;
+}
+.sandwich:hover .sandwich__bread--bottom {
+  top: 300px;
+}
+.sandwich:hover .sandwich__tomato {
+  cursor: pointer;
+  transform: skew(60deg, -20deg);
+  transition: 1s;
+}
+.sandwich:hover .sandwich__lettuce {
+  top: 225px;
+  left: 89px;
+  width: 190px;
+  height: 125px;
+  cursor: pointer;
+  transform: skew(60deg, -20deg);
+  transition: 1s;
+}
+.sandwich:hover .sandwich__egg {
+  cursor: pointer;
+  transform: skew(60deg, -20deg);
+  transition: 1s;
+  top: 137px;
+}
+.sandwich:hover .sandwich__eggItem {
+  cursor: pointer;
+  transform: skew(60deg, -20deg);
+  transition: 1s;
+  width: 60px;
+  height: 40px;
+  top: 22px;
+}
+.sandwich:hover .sandwich__eggItem:before {
+  top: 8px;
+  left: 9px;
+}
+.sandwich:hover .sandwich__eggItem:nth-of-type(2) {
+  left: -20px;
+  top: 95px;
+  width: 80px;
+  height: 28px;
+}
+.sandwich:hover .sandwich__eggItem:nth-of-type(2):before {
+  width: 57px;
+  height: 20px;
+}
+.sandwich:hover .sandwich__cheese {
+  top: 220px;
+  cursor: pointer;
+  transform: skew(60deg, -20deg);
+  transition: 1s;
+}
+.sandwich:hover .sandwich__onion {
+  cursor: pointer;
+  transform: skew(60deg, -20deg);
+  transition: 1s;
+}
+.sandwich:hover .sandwich__greenPepper {
+  cursor: pointer;
+  transform: skew(60deg, -20deg);
+  transition: 1s;
+}
+.sandwich:hover .sandwich__greenPepperItem {
+  cursor: pointer;
+  transform: skew(60deg, -20deg);
+  transition: 1s;
+}
+.sandwich:hover .sandwich__pikurusu {
+  top: 180px;
+  height: 30px;
+  cursor: pointer;
+  transform: skew(60deg, -20deg);
+  transition: 1s;
+}
+.sandwich:hover .sandwich__meat {
+  top: 150px;
+  width: 167px;
+  height: 89px;
+  cursor: pointer;
+  transform: skew(60deg, -20deg);
+  transition: 1s;
+}
+.sandwich:hover .sandwich__bacon {
+  cursor: pointer;
+  transform: skew(60deg, -20deg);
+  transition: 1s;
+}
+.sandwich:hover .sandwich__bacon:before {
+  cursor: pointer;
+  transform: skew(60deg, -20deg);
+  transition: 1s;
+  width: 123px;
+  height: 38px;
+  top: 64px;
+  left: -111px;
+}
+.sandwich__bread {
+  position: absolute;
+  top: 70px;
+  left: 100px;
+  background-color: #ffde32;
+  width: 150px;
+  height: 100px;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 0px 9px 15px 10px;
+  border-color: #ffbb03;
+  z-index: 10;
+}
+.sandwich__bread:before {
+  top: -13px;
+  left: -20px;
+  background-color: #ffde32;
+  width: 170px;
+  height: 36px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 4px 7px 5px 12px;
+  border-color: #ffbb03;
+}
+.sandwich__bread:after {
+  top: 13px;
+  left: 0px;
+  background-color: #ffde32;
+  width: 150px;
+  height: 36px;
+}
+.sandwich__bread--bottom {
+  top: 127px;
+  z-index: 0;
+}
+.sandwich__tomato {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  background-color: #f19373;
+  border: 1px solid #fff;
+  width: 190px;
+  height: 100px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 4px 5px 6px 15px;
+  border-color: #f2654d;
+}
+.sandwich__tomato span {
+  position: absolute;
+  top: 43px;
+  left: 76px;
+  width: 5px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: yellow;
+  transform: rotate(100deg);
+}
+.sandwich__tomato span:before {
+  top: 0px;
+  left: -9px;
+  width: 5px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: yellow;
+}
+.sandwich__tomato span:after {
+  top: -2px;
+  left: 8px;
+  height: 8px;
+  width: 7px;
+  border-radius: 50%;
+  background-color: yellow;
+  transform: rotate(-24deg);
+}
+.sandwich__tomato span:nth-of-type(2) {
+  top: 43px;
+  left: 109px;
+}
+.sandwich__tomatoItem {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 85px;
+  height: 87px;
+  overflow: hidden;
+}
+.sandwich__tomatoItem:before {
+  position: absolute;
+  background-color: #f03a4b;
+  width: 112px;
+  height: 78px;
+  border-radius: 50%;
+  left: 5px;
+  top: 2px;
+  transform: rotateZ(13deg);
+}
+.sandwich__tomatoItem:nth-of-type(2) {
+  top: 11px;
+  left: 100px;
+  width: 79px;
+  height: 87px;
+  transform: rotateY(180deg);
+}
+.sandwich__tomatoItem:nth-of-type(2):before {
+  width: 103px;
+  height: 80px;
+  border-radius: 50%;
+  left: 5px;
+  top: 0px;
+  transform: rotateZ(3deg);
+}
+.sandwich__lettuce {
+  position: absolute;
+  top: 80px;
+  left: 90px;
+  width: 173px;
+  height: 125px;
+  background-color: #8af15a;
+  border-radius: 57% 65% 70% 25%;
+  border-style: solid;
+  border-width: 4px 5px 6px 15px;
+  border-color: #7ece5a;
+}
+.sandwich__lettuceKuki {
+  position: absolute;
+  border-right: 4px solid #7ece5a;
+  width: 29px;
+  height: 127px;
+  border-radius: 70%;
+  bottom: -17px;
+  left: 26px;
+  transform: rotate(44deg);
+}
+.sandwich__lettuceKuki:before {
+  width: 29px;
+  height: 127px;
+  top: -12px;
+  left: 23px;
+  border-radius: 70%;
+  border-right: 4px solid #7ece5a;
+  transform: rotate(16deg);
+}
+.sandwich__egg {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+}
+.sandwich__eggItem {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  background-color: #fff;
+  width: 90px;
+  height: 50px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 4px 5px 6px 15px;
+  border-color: #f8fcee;
+}
+.sandwich__eggItem:before {
+  width: 58px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: yellow;
+  top: 2px;
+  left: 19px;
+}
+.sandwich__eggItem:nth-of-type(1) {
+  top: 0;
+  left: -35px;
+  width: 78px;
+  height: 43px;
+}
+.sandwich__eggItem:nth-of-type(1):before {
+  width: 50px;
+  height: 30px;
+}
+.sandwich__eggItem:nth-of-type(2) {
+  top: 15px;
+  left: 87px;
+}
+.sandwich__cheese {
+  position: absolute;
+  top: 75px;
+  left: 113px;
+  background-color: #ffbb03;
+  width: 150px;
+  height: 100px;
+}
+.sandwich__onion {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  width: 190px;
+  height: 100px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 4px 6px 6px 13px;
+  border-color: #ebd9e5;
+  background-color: #fcf4fa;
+}
+.sandwich__onion:before {
+  top: 5px;
+  left: 12px;
+  border-radius: 50%;
+  border-style: solid;
+  width: 155px;
+  height: 80px;
+  border-width: 3px 5px 4px 9px;
+  border-color: #ebd9e5;
+  background-color: #fcf4fa;
+}
+.sandwich__onion:after {
+  top: 14px;
+  left: 38px;
+  border-radius: 50%;
+  border-style: solid;
+  width: 113px;
+  height: 60px;
+  border-width: 3px 5px 4px 9px;
+  border-color: #ebd9e5;
+  background-color: #fcf4fa;
+}
+.sandwich__greenPepper {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+}
+.sandwich__greenPepperItem {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 73px;
+  height: 40px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 4px 5px 6px 15px;
+  border-color: #7ece5a;
+}
+.sandwich__greenPepperItem:before {
+  width: 58px;
+  height: 35px;
+  border-radius: 50%;
+  border-width: 4px 5px 6px 15px;
+  border-color: #7ece5a;
+  border-style: solid;
+  top: 17px;
+  left: -34px;
+}
+.sandwich__greenPepperItem:after {
+  width: 58px;
+  height: 35px;
+  border-radius: 50%;
+  border-width: 4px 5px 6px 15px;
+  border-color: #7ece5a;
+  border-style: solid;
+  top: 2px;
+  left: -64px;
+}
+.sandwich__pikurusu {
+  position: absolute;
+  top: 145px;
+  left: 130px;
+  width: 55px;
+  height: 30px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px 4px 2px 10px;
+  border-color: #8af15a;
+  background-color: #7ece5a;
+}
+.sandwich__pikurusu:before {
+  width: 10px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #8af15a;
+  top: 17px;
+  left: 25px;
+}
+.sandwich__pikurusu:after {
+  width: 10px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #8af15a;
+  top: 13px;
+  left: 14px;
+}
+.sandwich__meat {
+  position: absolute;
+  top: 90px;
+  left: 90px;
+  background-color: #8a4e09;
+  width: 168px;
+  height: 100px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px 5px 7px 15px;
+  border-color: #774205;
+}
+.sandwich__bacon {
+  position: absolute;
+  top: 0;
+  left: 150px;
+  background-color: #f19373;
+  width: 54px;
+  height: 114px;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 0 7px 6px 15px;
+  border-color: #8a4e09;
+}
+.sandwich__bacon:before {
+  top: 42px;
+  left: -42px;
+  background-color: #f19373;
+  width: 185px;
+  height: 20px;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 0 7px 6px 15px;
+  border-color: #8a4e09;
+}
+.sandwich--blt {
+  left: 100px;
+}
+.sandwich--blt .sandwich__egg {
+  top: 120px;
+}
+.sandwich--blt .sandwich__bacon {
+  top: 133px;
+  transform: rotate(50deg);
+}
+.sandwich--blt .sandwich__bacon:before {
+  top: -4px;
+  left: -42px;
+  width: 108px;
+  height: 42px;
+}
+.sandwich--blt .sandwich__lettuce {
+  top: 80px;
+  left: 90px;
+  width: 173px;
+  height: 125px;
+}
+.sandwich--blt:hover .sandwich__egg {
+  top: 118px;
+  left: 35px;
+}
+.sandwich--blt:hover .sandwich__bacon {
+  top: 165px;
+}
+.sandwich--tomabe {
+  left: 200px;
+}
+.sandwich--tomabe .sandwich__tomato {
+  top: 90px;
+  left: 90px;
+  width: 165px;
+  height: 95px;
+}
+.sandwich--tomabe .sandwich__onion {
+  top: 93px;
+  left: 80px;
+}
+.sandwich--tomabe .sandwich__lettuce {
+  top: 90px;
+  left: 90px;
+  width: 173px;
+  height: 125px;
+}
+.sandwich--tomabe .sandwich__bacon {
+  top: 100px;
+  left: 95px;
+  transform: rotate(75deg);
+}
+.sandwich--tomabe .sandwich__bacon:before {
+  width: 45px;
+  height: 50px;
+}
+.sandwich--tomabe:hover .sandwich__tomato {
+  top: 122px;
+  left: 90px;
+}
+.sandwich--tomabe:hover .sandwich__onion {
+  top: 155px;
+  left: 88px;
+}
+.sandwich--tomabe:hover .sandwich__lettuce {
+  top: 210px;
+}
+.sandwich--tomabe:hover .sandwich__bacon {
+  top: 209px;
+  left: 180px;
+}
+.sandwich--tomabe:hover .sandwich__bacon:before {
+  width: 123px;
+  height: 50px;
+  top: 12px;
+  left: -84px;
+}
+.sandwich--pimahan {
+  left: 300px;
+}
+.sandwich--pimahan .sandwich__greenPepper {
+  top: 90px;
+  left: 90px;
+  width: 165px;
+  height: 95px;
+}
+.sandwich--pimahan .sandwich__onion {
+  top: 100px;
+  left: 80px;
+}
+.sandwich--pimahan .sandwich__lettuce {
+  top: 90px;
+  left: 90px;
+  width: 173px;
+  height: 125px;
+}
+.sandwich--pimahan .sandwich__tomato {
+  top: 90px;
+  left: 90px;
+}
+.sandwich--pimahan:hover .sandwich__tomato {
+  top: 205px;
+  left: 90px;
+}
+.sandwich--pimahan:hover .sandwich__onion {
+  top: 165px;
+  left: 88px;
+}
+.sandwich--pimahan:hover .sandwich__lettuce {
+  top: 220px;
+}
+.sandwich--pimahan:hover .sandwich__meat {
+  top: 132px;
+}
+.sandwich--pimahan:hover .sandwich__greenPepper {
+  top: 100px;
+}
+.sandwich--teritama {
+  left: 400px;
+}
+.sandwich--teritama .sandwich__egg {
+  top: 120px;
+}
+.sandwich--teritama .sandwich__lettuce {
+  top: 80px;
+  left: 90px;
+  width: 173px;
+  height: 125px;
+}
+.sandwich--teritama:hover .sandwich__egg {
+  top: 202px;
+  left: 28px;
+}
+.sandwich--teritama:hover .sandwich__lettuce {
+  top: 210px;
+}
+.sandwich--teritama:hover .sandwich__meat {
+  top: 155px;
+}
+.sandwich--teritama:hover .sandwich__pikurusu {
+  top: 180px;
+  left: 120px;
+}
+
+p {
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  overflow: scroll;
+  margin: 0;
+  background-color: #f5e9b8;
+  font-family: "Cute Font", cursive;
+}
+
+* {
+  z-index: 1;
+}
+*:before, *:after {
+  position: absolute;
+  content: "";
+}
