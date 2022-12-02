@@ -1,0 +1,94 @@
+body {
+  background: #FFD4CA;
+}
+
+.container {
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 200px;
+  height: 100px;
+}
+
+.bag,
+.container,
+.wheel,
+.handle,
+.tag, .speed {
+  position: absolute;
+}
+
+.handle {
+  width: 12vmin;
+  height: 2vmin;
+  background: #656D6E;
+  top: -20vmin;
+  left: 9vmin;
+  border-radius: 2px;
+}
+.handle:before, .handle:after {
+  position: absolute;
+  top: 2vmin;
+  content: "";
+  width: 1vmin;
+  height: 20vmin;
+  background: #7B8486;
+}
+.handle:after {
+  left: 11vmin;
+}
+
+.bag {
+  width: 30vmin;
+  height: 40vmin;
+  background: #7DCFB6;
+  border-radius: 4vmin;
+}
+.bag:before, .bag:after {
+  position: absolute;
+  content: "";
+}
+.bag:before {
+  width: 1.5vmin;
+  height: 33vmin;
+  background: #FFF;
+  opacity: 0.1;
+  top: 4vmin;
+  left: 2.4vmin;
+  box-shadow: 24vmin 0 0 rgba(255, 255, 255, 0.9), 21vmin 0 0 rgba(255, 255, 255, 0.9), 18vmin 0 0 rgba(255, 255, 255, 0.9), 15vmin 0 0 rgba(255, 255, 255, 0.9), 12vmin 0 0 rgba(255, 255, 255, 0.9), 9vmin 0 0 rgba(255, 255, 255, 0.9), 6vmin 0 0 rgba(255, 255, 255, 0.9), 3vmin 0 0 rgba(255, 255, 255, 0.9);
+}
+
+.wheel {
+  width: 3vmin;
+  height: 3vmin;
+  top: 40vmin;
+  left: 3vmin;
+  background: #656D6E;
+  border-radius: 100%;
+  box-shadow: 21vmin 0 0 #656D6E;
+}
+
+.tag {
+  width: 3vmin;
+  height: 5vmin;
+  border: 0.5vmin solid #F3E9D2;
+  background: #C6DABF;
+  top: 1vmin;
+  left: 7.6vmin;
+  border-radius: 0.3vmin;
+}
+.tag:before, .tag:after {
+  position: absolute;
+  top: -2vmin;
+  left: 0.7vmin;
+  content: "";
+  background: #F3E9D2;
+  width: 0.3vmin;
+  height: 2vmin;
+  border-radius: 10vmin 10vmin 0 0;
+}
+.tag:after {
+  left: 1.6vmin;
+}
