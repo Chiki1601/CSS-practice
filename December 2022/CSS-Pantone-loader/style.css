@@ -1,0 +1,197 @@
+@-webkit-keyframes rotate {
+  0%, 33% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0%, 33% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  position: relative;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  margin-left: -50px;
+  border-radius: 3px 8px 8px 3px;
+  -webkit-animation: rotate 4s infinite ease-in;
+          animation: rotate 4s infinite ease-in;
+  transform-origin: 100%;
+  border: 2px solid #444;
+}
+
+.card-1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  z-index: 2;
+}
+
+.card-2 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  z-index: 3;
+}
+
+.card-3 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  z-index: 4;
+}
+
+.card-4 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  z-index: 5;
+}
+
+.card-5 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  z-index: 6;
+}
+
+.card-6 {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  z-index: 7;
+}
+
+.card-7 {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+  z-index: 8;
+}
+
+.card-8 {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+  z-index: 9;
+}
+
+.card-9 {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+  z-index: 10;
+}
+
+.card-10 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  z-index: 11;
+}
+
+.card-11 {
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+  z-index: 12;
+}
+
+.card-12 {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+  z-index: 13;
+}
+
+.card-1 {
+  background-color: #34a5d4;
+}
+
+.card-2 {
+  background-color: #00c7b4;
+}
+
+.card-3 {
+  background-color: #81e567;
+}
+
+.card-4 {
+  background-color: #d7f500;
+}
+
+.card-5 {
+  background-color: #ffff42;
+}
+
+.card-6 {
+  background-color: #ffe26a;
+}
+
+.card-7 {
+  background-color: #f99d78;
+}
+
+.card-8 {
+  background-color: #f79fb7;
+}
+
+.card-9 {
+  background-color: #fc71c4;
+}
+
+.card-10 {
+  background-color: #ff009b;
+}
+
+.card-11 {
+  background-color: #c672c2;
+}
+
+.card-12 {
+  background-color: #af8afe;
+}
+
+.bottom {
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  border-left: 2px solid #444;
+  border-radius: 0px 6px 6px 0px;
+}
+.bottom:after {
+  width: 4px;
+  height: 20px;
+  position: absolute;
+  content: "";
+  bottom: 5px;
+  left: 5px;
+  background-color: #cbcccc;
+}
+.bottom:before {
+  width: 2px;
+  height: 15px;
+  position: absolute;
+  content: "";
+  bottom: 5px;
+  left: 12px;
+  background-color: #cbcccc;
+}
