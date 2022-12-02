@@ -1,0 +1,986 @@
+/*CSS TAJ MAHAL*/
+/*By: Jan Dennison @jannypie*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.arches {
+  position: absolute;
+  left: 15%;
+  top: 55%;
+}
+.arches .arch {
+  border-left: 3px solid #e7e7e7;
+  border-right: 3px solid #e7e7e7;
+  border-top: 15px solid #e7e7e7;
+  -moz-border-radius: 50% 50% 0 0;
+  -webkit-border-radius: 50% 50% 0 0;
+  border-radius: 50% 50% 0 0;
+  float: left;
+  display: inline-block;
+}
+.arches .arch:first-child {
+  border-color: #dcdcdc;
+}
+.arches .arch:last-child {
+  border-color: #ededed;
+}
+
+.dome, .onion-dome, .chattri-dome, .minaret-dome, #taj-mahal .chattri .dome {
+  -moz-border-radius: 50% 50% 0 0;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 50% 0 0;
+  background: #dedede;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #dedede 0%, #efefef 27%, #efefef 50%, #fefefe 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #dedede), color-stop(27%, #efefef), color-stop(50%, #efefef), color-stop(100%, #fefefe));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #dedede 0%, #efefef 27%, #efefef 50%, #fefefe 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #dedede 0%, #efefef 27%, #efefef 50%, #fefefe 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #dedede 0%, #efefef 27%, #efefef 50%, #fefefe 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #dedede 0%, #efefef 27%, #efefef 50%, #fefefe 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dedede', endColorstr='#fefefe',GradientType=1 );
+  /* IE6-9 */
+  position: absolute;
+}
+
+.onion-dome {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.chattri-dome {
+  left: 15%;
+  top: 20%;
+}
+.chattri-dome:after {
+  background: #dedede;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #dedede 0%, #dedede 32%, #efefef 33%, #efefef 66%, #fafafa 67%, #fafafa 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #dedede), color-stop(32%, #dedede), color-stop(33%, #efefef), color-stop(66%, #efefef), color-stop(67%, #fafafa), color-stop(100%, #fafafa));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #dedede 0%, #dedede 32%, #efefef 33%, #efefef 66%, #fafafa 67%, #fafafa 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #dedede 0%, #dedede 32%, #efefef 33%, #efefef 66%, #fafafa 67%, #fafafa 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #dedede 0%, #dedede 32%, #efefef 33%, #efefef 66%, #fafafa 67%, #fafafa 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #dedede 0%, #dedede 32%, #efefef 33%, #efefef 66%, #fafafa 67%, #fafafa 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dedede', endColorstr='#fafafa',GradientType=1 );
+  /* IE6-9 */
+  content: '';
+  display: block;
+  position: absolute;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #dedede;
+  width: 105%;
+  height: 8px;
+  bottom: 0;
+  left: -2.5%;
+}
+.chattri-dome:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 110%;
+  height: 0px;
+  border-top: 5px solid #fafafa;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  bottom: -5px;
+  left: -15%;
+  -webkit-box-shadow: 0px 2px 0px 0px #cccccc;
+  -moz-box-shadow: 0px 2px 0px 0px #cccccc;
+  box-shadow: 0px 2px 0px 0px #cccccc;
+}
+
+.minaret-dome {
+  left: 15%;
+  top: 20%;
+}
+.minaret-dome:after {
+  background: #dedede;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #dedede 0%, #dedede 32%, #efefef 33%, #efefef 66%, #fafafa 67%, #fafafa 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #dedede), color-stop(32%, #dedede), color-stop(33%, #efefef), color-stop(66%, #efefef), color-stop(67%, #fafafa), color-stop(100%, #fafafa));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #dedede 0%, #dedede 32%, #efefef 33%, #efefef 66%, #fafafa 67%, #fafafa 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #dedede 0%, #dedede 32%, #efefef 33%, #efefef 66%, #fafafa 67%, #fafafa 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #dedede 0%, #dedede 32%, #efefef 33%, #efefef 66%, #fafafa 67%, #fafafa 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #dedede 0%, #dedede 32%, #efefef 33%, #efefef 66%, #fafafa 67%, #fafafa 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dedede', endColorstr='#fafafa',GradientType=1 );
+  /* IE6-9 */
+  content: '';
+  display: block;
+  position: absolute;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #dedede;
+  width: 105%;
+  height: 4px;
+  bottom: 0;
+  left: -2.5%;
+}
+.minaret-dome:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 110%;
+  height: 2px;
+  border-top: 5px solid #fafafa;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  bottom: -7px;
+  left: -20%;
+  -webkit-box-shadow: inset 0px -2px 0px 0px #cccccc;
+  -moz-box-shadow: inset 0px -2px 0px 0px #cccccc;
+  box-shadow: inset 0px -2px 0px 0px #cccccc;
+}
+
+.lotus-base {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fafafa;
+  position: absolute;
+}
+
+/*base of the spire*/
+.spire {
+  border-bottom: 5px solid darkgrey;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  height: 0;
+  width: 14px;
+  position: absolute;
+  /*bottom ball*/
+}
+.spire:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 4px solid darkgrey;
+  border-radius: 50%;
+  top: -8px;
+}
+.spire .finial {
+  width: 2px;
+  height: 20px;
+  background: darkgrey;
+  position: absolute;
+  top: -20px;
+  left: 3px;
+  /*point*/
+}
+.spire .finial:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-bottom: 10px solid darkgrey;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  left: -2px;
+  top: -10px;
+}
+.spire .finial:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 3px solid darkgrey;
+  border-radius: 50%;
+  left: -2px;
+  top: 2px;
+}
+
+.minaret-band, #taj-mahal .minaret.left-minaret .band1, #taj-mahal .minaret.left-minaret .band2, #taj-mahal .minaret.left-minaret .band3, #taj-mahal .minaret.right-minaret .band1, #taj-mahal .minaret.right-minaret .band2, #taj-mahal .minaret.right-minaret .band3, #taj-mahal .back-minaret.backleft-minaret .band1, #taj-mahal .back-minaret.backleft-minaret .band2, #taj-mahal .back-minaret.backleft-minaret .band3, #taj-mahal .back-minaret.backright-minaret .band1, #taj-mahal .back-minaret.backright-minaret .band2, #taj-mahal .back-minaret.backright-minaret .band3 {
+  position: absolute;
+  background: #dedede;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #dedede 0%, #efefef 27%, #efefef 50%, #fefefe 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #dedede), color-stop(27%, #efefef), color-stop(50%, #efefef), color-stop(100%, #fefefe));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #dedede 0%, #efefef 27%, #efefef 50%, #fefefe 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #dedede 0%, #efefef 27%, #efefef 50%, #fefefe 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #dedede 0%, #efefef 27%, #efefef 50%, #fefefe 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #dedede 0%, #efefef 27%, #efefef 50%, #fefefe 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dedede', endColorstr='#fefefe',GradientType=1 );
+  /* IE6-9 */
+}
+.minaret-band:after, #taj-mahal .minaret.left-minaret .band1:after, #taj-mahal .minaret.left-minaret .band2:after, #taj-mahal .minaret.left-minaret .band3:after, #taj-mahal .minaret.right-minaret .band1:after, #taj-mahal .minaret.right-minaret .band2:after, #taj-mahal .minaret.right-minaret .band3:after, #taj-mahal .back-minaret.backleft-minaret .band1:after, #taj-mahal .back-minaret.backleft-minaret .band2:after, #taj-mahal .back-minaret.backleft-minaret .band3:after, #taj-mahal .back-minaret.backright-minaret .band1:after, #taj-mahal .back-minaret.backright-minaret .band2:after, #taj-mahal .back-minaret.backright-minaret .band3:after {
+  content: '';
+  display: block;
+  position: absolute;
+  position: static;
+  border-top: 4px solid #cccccc;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.ledge:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: #f9f9f9;
+  top: -1px;
+  border-bottom: 2px solid #cccccc;
+}
+
+.arch-frame {
+  border: 1px solid #d7d7cf;
+  border-bottom: transparent;
+  position: absolute;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAWUlEQVQYV4VQsQ0AIAyy5zj6/xGOnqPBhAZJE10sFJE22uesNXfvI0J1IInRZA3+Ad4kTiHtecPJ6+voJDh1y4wq9Mx8UGbkUJq5nFoF/OER6jp8TaWwynkAPHpOfxe1zTgAAAAASUVORK5CYII=) repeat;
+}
+
+body {
+  background: #b5c7df;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #b5c7df 0%, #bfcfdf 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #b5c7df), color-stop(100%, #bfcfdf));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #b5c7df 0%, #bfcfdf 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #b5c7df 0%, #bfcfdf 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #b5c7df 0%, #bfcfdf 100%);
+  /* IE10+ */
+  background: linear-gradient(45deg, #b5c7df 0%, #bfcfdf 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5c7df', endColorstr='#bfcfdf',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  position: relative;
+}
+
+/*end body */
+#taj-mahal {
+  position: relative;
+  display: block;
+  margin: 100px auto;
+  width: 870px;
+  height: 460px;
+  /*end gate*/
+  /*end side*/
+  /*pillars*/
+  /*end terrace*/
+  /*end main minarets*/
+  /*end back minarets*/
+  /*end windows*/
+}
+#taj-mahal .chattri {
+  position: relative;
+  width: 74px;
+  height: 100px;
+  /*left chattri*/
+}
+#taj-mahal .chattri .arch {
+  width: 20px;
+  height: 40px;
+  margin-left: -3px;
+}
+#taj-mahal .chattri .onion-dome, #taj-mahal .chattri .chattri-dome, #taj-mahal .chattri .minaret-dome, #taj-mahal .chattri .dome {
+  width: 50px;
+  height: 40px;
+}
+#taj-mahal .chattri .lotus-base {
+  width: 30px;
+  height: 0;
+  top: 15px;
+  left: 50%;
+  margin-left: -15px;
+}
+#taj-mahal .chattri .lotus-base:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-bottom: 3px dotted #cccccc;
+  height: 0;
+  width: 32px;
+  bottom: -12px;
+  left: -12px;
+}
+#taj-mahal .chattri .spire {
+  top: 10px;
+  left: 50%;
+  margin-left: -7px;
+}
+#taj-mahal .chattri.chattri-left {
+  left: 50%;
+  margin-left: -130px;
+  top: 108px;
+}
+#taj-mahal .chattri.chattri-right {
+  left: 50%;
+  margin-left: 60px;
+  top: 10px;
+}
+#taj-mahal .central-dome .drum {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 10px solid #dddddd;
+  border-radius: 50% 50% 0 0;
+  position: absolute;
+  width: 154px;
+  top: 167px;
+  left: 50%;
+  margin-left: -76px;
+  -webkit-box-shadow: 0px -2px 0px 0px #cccccc;
+  -moz-box-shadow: 0px -2px 0px 0px #cccccc;
+  box-shadow: 0px -2px 0px 0px #cccccc;
+}
+#taj-mahal .central-dome .onion-dome {
+  width: 166px;
+  height: 166px;
+  position: absolute;
+  left: 50%;
+  margin-left: -82px;
+  top: 45px;
+  /*base of the spire*/
+}
+#taj-mahal .central-dome .onion-dome:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: #dedede;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #dedede 0%, #efefef 27%, #efefef 50%, #fefefe 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #dedede), color-stop(27%, #efefef), color-stop(50%, #efefef), color-stop(100%, #fefefe));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #dedede 0%, #efefef 27%, #efefef 50%, #fefefe 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #dedede 0%, #efefef 27%, #efefef 50%, #fefefe 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #dedede 0%, #efefef 27%, #efefef 50%, #fefefe 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #dedede 0%, #efefef 27%, #efefef 50%, #fefefe 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dedede', endColorstr='#fefefe',GradientType=1 );
+  /* IE6-9 */
+  height: 8px;
+  width: 150px;
+  bottom: 40px;
+  left: 8px;
+  -webkit-box-shadow: 0px -1px 0px 0px #cccccc;
+  -moz-box-shadow: 0px -1px 0px 0px #cccccc;
+  box-shadow: 0px -1px 0px 0px #cccccc;
+}
+#taj-mahal .central-dome .onion-dome .spire {
+  border-bottom: 8px solid darkgrey;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  height: 0;
+  width: 25px;
+  position: absolute;
+  top: -19px;
+  left: 70px;
+  /*ball below teardrop*/
+  /*large teardrop spire ball*/
+}
+#taj-mahal .central-dome .onion-dome .spire:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 4px solid darkgrey;
+  border-radius: 50%;
+  left: 3px;
+  top: -8px;
+}
+#taj-mahal .central-dome .onion-dome .spire:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 6px solid darkgrey;
+  border-radius: 0 50% 70% 50%;
+  top: -20px;
+  left: 1px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#taj-mahal .central-dome .onion-dome .spire .finial {
+  width: 2px;
+  height: 55px;
+  background: darkgrey;
+  position: absolute;
+  top: -55px;
+  left: 6px;
+  /*arrow point*/
+  /*ball below arrow*/
+}
+#taj-mahal .central-dome .onion-dome .spire .finial:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-bottom: 10px solid darkgrey;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  left: -2px;
+  top: -10px;
+}
+#taj-mahal .central-dome .onion-dome .spire .finial:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 3px solid darkgrey;
+  border-radius: 50%;
+  left: -2px;
+  top: 4px;
+}
+#taj-mahal .central-dome .onion-dome .spire .crescent {
+  border-bottom: 3px solid darkgrey;
+  border-left: 1px solid darkgrey;
+  border-right: 1px solid darkgrey;
+  border-top: 10px solid transparent;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: -58px;
+  left: -3px;
+  /*ball below moon crescent*/
+}
+#taj-mahal .central-dome .onion-dome .spire .crescent:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 5px solid darkgrey;
+  border-radius: 50%;
+  left: 4px;
+  top: 13px;
+}
+#taj-mahal .central-dome .lotus-base {
+  width: 100px;
+  border-bottom-width: 30px;
+  border-left-width: 40px;
+  border-right-width: 40px;
+  height: 0;
+  top: 32px;
+  left: 50%;
+  margin-left: -50px;
+}
+#taj-mahal .central-dome .lotus-base:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-bottom: 4px dotted #cccccc;
+  height: 0;
+  width: 86px;
+  bottom: -32px;
+  left: -34px;
+}
+#taj-mahal .great-gate {
+  width: 146px;
+  height: 166px;
+  background: #eaeaea;
+  position: absolute;
+  top: 178px;
+  left: 50%;
+  margin-left: -73px;
+}
+#taj-mahal .great-gate .gate-detail {
+  border: 12px solid #E3E3E5;
+  border-bottom: transparent;
+  width: 126px;
+  height: 158px;
+  margin: 12px 10px;
+}
+#taj-mahal .great-gate .arch-frame {
+  height: 50px;
+  margin: 5px 11px;
+  width: 80px;
+}
+#taj-mahal .great-gate .arch {
+  background: #cbcbd6;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #cbcbd6 0%, #cbcbd6 52%, #d5d5e2 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cbcbd6), color-stop(52%, #cbcbd6), color-stop(100%, #d5d5e2));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #cbcbd6 0%, #cbcbd6 52%, #d5d5e2 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #cbcbd6 0%, #cbcbd6 52%, #d5d5e2 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #cbcbd6 0%, #cbcbd6 52%, #d5d5e2 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #cbcbd6 0%, #cbcbd6 52%, #d5d5e2 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbcbd6', endColorstr='#d5d5e2',GradientType=0 );
+  /* IE6-9 */
+  width: 80px;
+  height: 110px;
+  position: absolute;
+  top: 58px;
+  left: 50%;
+  margin-left: -40px;
+}
+#taj-mahal .great-gate .arch:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  margin-left: -25px;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 10px solid #cbcbd6;
+}
+#taj-mahal .great-gate .arch:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  background: #cbcbd6;
+  top: -22px;
+  -moz-border-radius: 50% 50% 0 0;
+  -webkit-border-radius: 50% 50% 0 0;
+  border-radius: 50% 50% 0 0;
+}
+#taj-mahal .side {
+  width: 64px;
+  height: 142px;
+  background: #eaeaea;
+  position: absolute;
+}
+#taj-mahal .side.far-left {
+  top: 202px;
+  left: 237px;
+  width: 54px;
+  background: #e5e5e5;
+}
+#taj-mahal .side.left {
+  top: 202px;
+  left: 294px;
+}
+#taj-mahal .side.right {
+  top: 202px;
+  right: 294px;
+}
+#taj-mahal .side.far-right {
+  top: 202px;
+  right: 237px;
+  width: 54px;
+  background: #efefef;
+}
+#taj-mahal .side .arch-frame {
+  height: 20px;
+  margin-left: 16px;
+  width: 32px;
+}
+#taj-mahal .side .arch-frame.top {
+  margin-top: 23px;
+}
+#taj-mahal .side .arch-frame.bottom {
+  margin-top: 93px;
+}
+#taj-mahal .pillar {
+  width: 6px;
+  height: 160px;
+  background: #d7dbda;
+  position: absolute;
+  /*behind far left side*/
+  /*behind far right side*/
+}
+#taj-mahal .pillar:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-left: 4px solid #efefef;
+  border-right: 4px solid #cccccc;
+  border-top: 4px solid #efefef;
+  border-bottom: 4px solid #cccccc;
+  border-radius: 50%;
+  top: -2px;
+  left: -1px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#taj-mahal .pillar:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-bottom: 10px solid darkgrey;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  left: 0;
+  top: -8px;
+}
+#taj-mahal .pillar.pillar1 {
+  left: 260px;
+  top: 174px;
+}
+#taj-mahal .pillar.pillar2 {
+  top: 174px;
+  left: 600px;
+}
+#taj-mahal .pillar.pillar3 {
+  top: 190px;
+  left: 235px;
+}
+#taj-mahal .pillar.pillar4 {
+  top: 190px;
+  left: 290px;
+}
+#taj-mahal .pillar.pillar5 {
+  top: 190px;
+  left: 358px;
+}
+#taj-mahal .pillar.pillar6 {
+  top: 190px;
+  left: 506px;
+}
+#taj-mahal .pillar.pillar7 {
+  top: 190px;
+  left: 575px;
+}
+#taj-mahal .pillar.pillar8 {
+  top: 190px;
+  left: 630px;
+}
+#taj-mahal .terrace {
+  background: #eaeaea;
+  width: 624px;
+  height: 40px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  margin-left: -312px;
+}
+#taj-mahal .minaret {
+  border-bottom: 231px solid #eaeaea;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0px;
+  width: 44px;
+  /*position main minarets*/
+}
+#taj-mahal .minaret .base {
+  background: #dedede;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #dedede 0%, #dedede 32%, #efefef 33%, #efefef 66%, #fafafa 67%, #fafafa 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #dedede), color-stop(32%, #dedede), color-stop(33%, #efefef), color-stop(66%, #efefef), color-stop(67%, #fafafa), color-stop(100%, #fafafa));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #dedede 0%, #dedede 32%, #efefef 33%, #efefef 66%, #fafafa 67%, #fafafa 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #dedede 0%, #dedede 32%, #efefef 33%, #efefef 66%, #fafafa 67%, #fafafa 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #dedede 0%, #dedede 32%, #efefef 33%, #efefef 66%, #fafafa 67%, #fafafa 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #dedede 0%, #dedede 32%, #efefef 33%, #efefef 66%, #fafafa 67%, #fafafa 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dedede', endColorstr='#fafafa',GradientType=1 );
+  /* IE6-9 */
+  content: '';
+  display: block;
+  position: absolute;
+  height: 44px;
+  width: 50px;
+  top: 231px;
+  left: -12px;
+  border-top: 3px solid #f9f9f9;
+}
+#taj-mahal .minaret .minaret-chattri {
+  position: relative;
+  width: 54px;
+  height: 70px;
+  top: -57px;
+  left: -11px;
+  /*left chattri*/
+}
+#taj-mahal .minaret .minaret-chattri .arch {
+  width: 14px;
+  height: 20px;
+  border-top-width: 5px;
+  margin-left: -3px;
+  margin-top: -1px;
+}
+#taj-mahal .minaret .minaret-chattri .minaret-dome {
+  width: 30px;
+  height: 20px;
+}
+#taj-mahal .minaret .minaret-chattri .lotus-base {
+  width: 14px;
+  height: 0;
+  top: 10px;
+  left: 50%;
+  margin-left: -12px;
+}
+#taj-mahal .minaret .minaret-chattri .spire {
+  top: 10px;
+  left: 50%;
+  margin-left: -10px;
+}
+#taj-mahal .minaret .minaret-chattri.chattri-left {
+  left: 50%;
+  margin-left: -140px;
+  top: 108px;
+}
+#taj-mahal .minaret .minaret-chattri.chattri-right {
+  left: 50%;
+  margin-left: 72px;
+  top: 10px;
+}
+#taj-mahal .minaret.left-minaret {
+  position: absolute;
+  top: 112px;
+  left: 82px;
+}
+#taj-mahal .minaret.left-minaret .band1 {
+  width: 50px;
+  height: 10px;
+  top: 155px;
+  left: -13px;
+}
+#taj-mahal .minaret.left-minaret .band1:after {
+  margin-top: 10px;
+}
+#taj-mahal .minaret.left-minaret .band2 {
+  width: 44px;
+  height: 8px;
+  top: 72px;
+  left: -10px;
+}
+#taj-mahal .minaret.left-minaret .band2:after {
+  margin-top: 8px;
+}
+#taj-mahal .minaret.left-minaret .band3 {
+  width: 38px;
+  height: 6px;
+  top: -2px;
+  left: -7px;
+}
+#taj-mahal .minaret.left-minaret .band3:after {
+  margin-top: 6px;
+}
+#taj-mahal .minaret.right-minaret {
+  position: absolute;
+  top: 112px;
+  right: 82px;
+}
+#taj-mahal .minaret.right-minaret .band1 {
+  width: 50px;
+  height: 10px;
+  top: 155px;
+  left: -13px;
+}
+#taj-mahal .minaret.right-minaret .band1:after {
+  margin-top: 10px;
+}
+#taj-mahal .minaret.right-minaret .band2 {
+  width: 44px;
+  height: 8px;
+  top: 72px;
+  left: -10px;
+}
+#taj-mahal .minaret.right-minaret .band2:after {
+  margin-top: 8px;
+}
+#taj-mahal .minaret.right-minaret .band3 {
+  width: 38px;
+  height: 6px;
+  top: -2px;
+  left: -7px;
+}
+#taj-mahal .minaret.right-minaret .band3:after {
+  margin-top: 6px;
+}
+#taj-mahal .back-minaret {
+  border-bottom: 134px solid #e5e5e5;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0px;
+  width: 32px;
+}
+#taj-mahal .back-minaret .minaret-chattri {
+  position: relative;
+  width: 34px;
+  height: 50px;
+  top: -50px;
+  left: -12px;
+}
+#taj-mahal .back-minaret .minaret-chattri .arches {
+  left: 25%;
+}
+#taj-mahal .back-minaret .minaret-chattri .arch {
+  width: 10px;
+  height: 20px;
+  border-top-width: 5px;
+  margin-left: -3px;
+}
+#taj-mahal .back-minaret .minaret-chattri .minaret-dome {
+  width: 25px;
+  height: 15px;
+}
+#taj-mahal .back-minaret .minaret-chattri .spire {
+  top: 10px;
+  left: 50%;
+  margin-left: -6px;
+}
+#taj-mahal .back-minaret.backleft-minaret {
+  position: absolute;
+  top: 210px;
+  left: 178px;
+}
+#taj-mahal .back-minaret.backleft-minaret .band1 {
+  width: 32px;
+  height: 6px;
+  top: 88px;
+  left: -10px;
+}
+#taj-mahal .back-minaret.backleft-minaret .band1:after {
+  margin-top: 6px;
+}
+#taj-mahal .back-minaret.backleft-minaret .band2 {
+  width: 28px;
+  height: 6px;
+  top: 45px;
+  left: -8px;
+}
+#taj-mahal .back-minaret.backleft-minaret .band2:after {
+  margin-top: 6px;
+}
+#taj-mahal .back-minaret.backleft-minaret .band3 {
+  width: 24px;
+  height: 5px;
+  top: -2px;
+  left: -7px;
+}
+#taj-mahal .back-minaret.backleft-minaret .band3:after {
+  margin-top: 5px;
+}
+#taj-mahal .back-minaret.backright-minaret {
+  position: absolute;
+  top: 210px;
+  right: 178px;
+}
+#taj-mahal .back-minaret.backright-minaret .band1 {
+  width: 32px;
+  height: 6px;
+  top: 88px;
+  left: -10px;
+}
+#taj-mahal .back-minaret.backright-minaret .band1:after {
+  margin-top: 6px;
+}
+#taj-mahal .back-minaret.backright-minaret .band2 {
+  width: 28px;
+  height: 6px;
+  top: 45px;
+  left: -8px;
+}
+#taj-mahal .back-minaret.backright-minaret .band2:after {
+  margin-top: 6px;
+}
+#taj-mahal .back-minaret.backright-minaret .band3 {
+  width: 24px;
+  height: 5px;
+  top: -2px;
+  left: -7px;
+}
+#taj-mahal .back-minaret.backright-minaret .band3:after {
+  margin-top: 5px;
+}
+#taj-mahal .window-alcove {
+  background: #cbcbd6;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  left: 50%;
+  margin-left: -17px;
+}
+#taj-mahal .window-alcove:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  margin-left: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 5px solid #cbcbd6;
+}
+#taj-mahal .window-alcove:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 34px;
+  height: 35px;
+  background: #cbcbd6;
+  top: -10px;
+  border-radius: 40%;
+}
+#taj-mahal .window-alcove.top {
+  top: 38px;
+}
+#taj-mahal .window-alcove.bottom {
+  bottom: 0;
+}
+#taj-mahal .window-alcove.narrow {
+  width: 25px;
+  margin-left: -12px;
+  background: #c2c2ce;
+}
+#taj-mahal .window-alcove.narrow:before {
+  border-right-width: 8px;
+  border-left-width: 8px;
+  border-bottom-color: #c2c2ce;
+  margin-left: -8px;
+}
+#taj-mahal .window-alcove.narrow:after {
+  width: 25px;
+  background: #c2c2ce;
+}
+#taj-mahal .window {
+  width: 12px;
+  height: 18px;
+  border: 2px solid #dedeeb;
+  border-bottom: 0px solid transparent;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHklEQVQIW2PcsGHDfwYo0NOzZmAkLHDv3mu4FpBOADKwDp1X0Jv0AAAAAElFTkSuQmCC) repeat;
+  position: absolute;
+  left: 27px;
+}
+#taj-mahal .window.top {
+  top: 54px;
+}
+#taj-mahal .window.bottom {
+  top: 124px;
+}
+#taj-mahal .window.gate {
+  width: 24px;
+  height: 42px;
+  left: 60px;
+  border-radius: 40% 40% 0 0;
+}
