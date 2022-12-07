@@ -1,0 +1,92 @@
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+	outline: none;
+}
+body {
+	background-color: #fab142;
+}
+.wrapper {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	height: 400px;
+	width: 320px;
+}
+.container {
+	position: relative;
+	height: 320px;
+	width: 320px;
+	background-color: #ffffff;
+	border-radius: 10px;
+}
+a {
+	position: relative;
+	display: block;
+	font-family: "Poppins", sans-serif;
+	background-color: #3f2b25;
+	color: #fab142;
+	padding: 15px 0;
+	font-size: 22px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	margin-top: 15px;
+}
+input[type="checkbox"] {
+	-moz-appearance: none;
+	     appearance: none;
+	-webkit-appearance: none;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	height: 100px;
+	width: 200px;
+	background-color: #f2f2f2;
+	border-radius: 100px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+label[for="cup"] {
+	position: absolute;
+	background-color: #cccccc;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 60.5px;
+	height: 100px;
+	width: 100px;
+	border: 10px solid #e7e7e7;
+	border-radius: 50%;
+	box-shadow: inset -6px 6px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	transition: 0.5s;
+}
+label[for="cup"]:before {
+	content: "";
+	position: absolute;
+	height: 10px;
+	width: 30px;
+	background-image: linear-gradient(to left, #bebebe 30%, #cccccc 30%);
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: -38px;
+}
+input[type="checkbox"]:checked {
+	background-color: #fab142;
+}
+input[type="checkbox"]:checked + label[for="cup"] {
+	transform: translateX(100px) rotate(180deg);
+	background-color: #6e4c42;
+	box-shadow: inset 6px -6px rgba(0, 0, 0, 0.2);
+}
+.fab {
+	color: #ff0000;
+}
