@@ -1,0 +1,685 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Megrim&family=Oleo+Script+Swash+Caps&family=Rye&family=Russo+One&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  background-color: #1a1a1a;
+  padding: 2rem;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+}
+
+.title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  pointer-events: none;
+  font-size: max(8vmin, 100%);
+  font-family: "Russo One", serif;
+  font-weight: 600;
+  text-align: center;
+}
+.title span {
+  font-family: "Oleo Script Swash Caps", sans-serif;
+  font-size: 2em;
+  transform: rotate(-5deg);
+  letter-spacing: -0.25rem;
+}
+
+input[name=select-truck] {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+input[name=select-truck] + label {
+  display: inline-flex;
+  position: relative;
+  cursor: pointer;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: white;
+}
+
+input[name=select-truck]:checked + label {
+  color: yellow;
+  -webkit-text-decoration: underline wavy;
+          text-decoration: underline wavy;
+}
+input[name=select-truck]:checked + label::before, input[name=select-truck]:checked + label::after {
+  content: "→";
+  position: absolute;
+  top: 0.2em;
+  -webkit-animation: 500ms linear infinite;
+          animation: 500ms linear infinite;
+}
+input[name=select-truck]:checked + label::before {
+  left: -0.3em;
+  transform: rotate(30deg);
+  -webkit-animation-name: point-start;
+          animation-name: point-start;
+}
+input[name=select-truck]:checked + label::after {
+  right: -0.3em;
+  transform: rotate(-30deg) scaleX(-1);
+  -webkit-animation-name: point-end;
+          animation-name: point-end;
+}
+
+.scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  grid-template-areas: "trucks";
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.truck {
+  --color: hsl(0 0% 0%);
+  --color-accent: hsl(0 0% 10%);
+  --color-raised: hsla(0 0% 100% / 0.1);
+  --color-window: linear-gradient(
+    25deg,
+    hsl(0 0% 0% / 0.4) 55%,
+    hsl(0 0% 0% / 0.3) 55%
+  );
+  --tagline-font: "Russo One", serif;
+  grid-area: trucks;
+  display: grid;
+  grid-template-areas: "body front hood bumper";
+  grid-template-columns: [side-start] auto auto auto [side-end] auto;
+  align-items: center;
+  font-family: var(--main-font);
+  transform-style: preserve-3d;
+}
+.truck::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: translateX(5%) translateZ(-20vmin);
+  filter: blur(3vmin);
+}
+
+[id=taco-truck] {
+  --color: hsl(33 88% 54%);
+  --color-accent: hsl(33 88% 5%);
+  --name: "Taco Time";
+  --main-font: "Rye", sans-serif;
+  --tagline: "Nacho average taco truck";
+  --icon: "🌮";
+  --wrap-graphic: url("https://assets.codepen.io/225363/skull-hero-pattern.svg")
+    center left / 10%;
+}
+
+[id=pizza-truck] {
+  --color: hsl(0 75% 55%);
+  --color-accent: hsl(0 0% 100%);
+  --main-font: "Megrim", sans-serif;
+  --font-size: 3.25vmin;
+  --name: "a pizza my heart";
+  --tagline: "a reeeal pizza work";
+  --icon: "🍕";
+  --wrap-graphic: repeating-conic-gradient(
+      var(--color-accent) 0% 25%,
+      transparent 0% 50%
+    )
+    50% / 4vmin 4vmin;
+}
+
+[id=calzones-truck] {
+  --color: hsl(30 80% 60%);
+  --color-accent: hsl(44 72% 10%);
+  --main-font: "Holtwood One SC", sans-serif;
+  --font-size: 3vmin;
+  --name: "the low-cal calzone zone";
+  --tagline: "Pizza? Never heard of it!";
+  --icon: "🍕";
+  --icon-alt: "🚫";
+}
+
+[id=burgers-truck] {
+  --color: hsl(0 0% 100%);
+  --color-accent: hsl(0 80% 60%);
+  --main-font: "Russo One", sans-serif;
+  --font-size: 3.25vmin;
+  --name: "Paunch Burger";
+  --tagline: "Put it in your body";
+  --icon: "🍔";
+  --wrap-graphic: url("https://assets.codepen.io/225363/food-hero-pattern.svg")
+    top left / 25%;
+}
+
+[id=ice-cream-truck] {
+  --color: hsl(0 0% 100%);
+  --color-accent: hsl(229 74% 33%);
+  --main-font: "Oleo Script Swash Caps", sans-serif;
+  --name: "Scoops Ahoy";
+  --tagline: "Set sail on an ocean of flavor";
+  --icon: "🍦";
+  --wrap-graphic: url("https://assets.codepen.io/225363/anchor-hero-pattern.svg")
+    top left / 15%;
+}
+
+[id=cornballs-truck] {
+  --color: hsl(62 75% 63%);
+  --color-accent: hsl(62 75% 18%);
+  --image: url("https://assets.codepen.io/225363/cornballer-logo.png");
+  --icon: "🌽";
+  --tagline: "¡Soy loco por los cornballs!";
+}
+
+.cuboid {
+  --unit: 1vmin;
+  height: calc(var(--depth) * var(--unit));
+  width: calc(var(--width) * var(--unit));
+  transform-style: preserve-3d;
+  transform: translate3d(calc(var(--x, 0) * var(--unit)), calc(var(--y, 0) * var(--unit)), calc(var(--z, 0) * var(--unit)));
+}
+
+.cuboid .side {
+  display: grid;
+  place-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--color-accent);
+  background-color: var(--color);
+  box-shadow: inset 2vmin -2vmin 6vmin rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+}
+
+.cuboid .side.right {
+  height: calc(var(--height) * var(--unit));
+  width: 100%;
+  transform: translate(-50%, -50%) rotateX(-90deg) translateZ(calc((var(--depth) / 2) * var(--unit)));
+  filter: brightness(80%);
+}
+
+.cuboid .side.left {
+  height: calc(var(--height) * var(--unit));
+  width: 100%;
+  transform: translate(-50%, -50%) rotateX(-90deg) rotateY(180deg) translateZ(calc((var(--depth) / 2) * var(--unit))) scaleX(-1);
+  filter: brightness(80%);
+}
+
+.cuboid .side.front {
+  height: calc(var(--height) * var(--unit));
+  width: calc(var(--depth) * var(--unit));
+  transform: translate(-50%, -50%) rotateX(-90deg) rotateY(90deg) translateZ(calc((var(--width) / 2) * var(--unit)));
+  filter: brightness(90%);
+}
+
+.cuboid .side.back {
+  height: calc(var(--height) * var(--unit));
+  width: calc(var(--depth) * var(--unit));
+  transform: translate(-50%, -50%) rotateX(-90deg) rotateY(-90deg) translateZ(calc((var(--width) / 2) * var(--unit)));
+}
+
+.cuboid .side.top {
+  height: calc(var(--depth) * var(--unit));
+  width: calc(var(--width) * var(--unit) + 1px);
+  transform: translate(-50%, -50%) translateZ(calc((var(--height) / 2) * var(--unit)));
+}
+
+.cuboid .side.bottom {
+  height: calc(var(--depth) * var(--unit));
+  width: calc(var(--width) * var(--unit));
+  transform: translate(-50%, -50%) translateZ(calc((var(--height) / 2) * (var(--unit) * -1))) rotateX(180deg);
+}
+
+.truck .body {
+  --width: 40;
+  --height: 30;
+  --depth: 30;
+  grid-area: body;
+  z-index: 1;
+}
+.truck .body .side.front {
+  display: none;
+}
+.truck .body .side.bottom {
+  transform: translate(-50%, -50%) translateZ(calc((var(--height) / 3) * (var(--unit) * -1))) rotateX(180deg);
+}
+.truck .body .side.left {
+  transform: translate(-20vmin, -50%) rotateX(-90deg) translateZ(calc((var(--depth) / 2) * var(--unit)));
+}
+.truck .body .side.right {
+  transform: translate(-35%, -50%) rotateX(-90deg) rotateY(180deg) translateZ(calc((var(--depth) / 2) * var(--unit))) scaleX(-1);
+}
+.truck .body .side.top {
+  width: calc(100% + 6vmin);
+  transform: translate(calc(-50% + 3vmin), -50%) translateZ(calc((var(--height) / 2) * var(--unit)));
+}
+.truck .body .side.top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 40%;
+  width: 100%;
+  height: 100%;
+  background-image: var(--image, unset);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transform: rotate(-90deg) translateZ(var(--unit));
+}
+.truck .body .side.left {
+  width: calc(100% + 18vmin);
+  -webkit-clip-path: polygon(79.5% 0, 90% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+          clip-path: polygon(79.5% 0, 90% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+  -webkit-mask: radial-gradient(circle at bottom, transparent 5vmin, #000 5vmin) 0% 0%/50% 100% repeat-x;
+}
+.truck .body .side.left::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8vmin;
+  background: var(--wrap-graphic);
+}
+
+.truck .concession-window {
+  --width: 22;
+  --height: 12;
+  --depth: 1;
+  --x: 3;
+  --y: 1;
+  --z: 7;
+  align-self: end;
+  grid-area: body;
+}
+.truck .concession-window .side.right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-window);
+}
+
+.truck .countertop {
+  --width: 22;
+  --height: 1;
+  --depth: 6;
+  --x: 3;
+  --y: 6;
+  --z: 1;
+  align-self: end;
+  grid-area: body;
+}
+
+.truck .menu {
+  --width: 12;
+  --height: 13;
+  --depth: 1;
+  --x: 27;
+  --y: 1;
+  --z: 6.5;
+  align-self: end;
+  grid-area: body;
+  font-family: sans-serif;
+}
+.truck .menu .side.right {
+  display: grid;
+  grid-template-areas: "menu";
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.truck .menu .side.right::before, .truck .menu .side.right::after {
+  grid-area: menu;
+  font-size: calc(var(--unit) * 8);
+  content: var(--icon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.truck .menu .side.right::after {
+  content: var(--icon-alt);
+}
+
+.truck .roof {
+  --width: 15;
+  --height: 2;
+  --depth: 15;
+  --x: 5;
+  --z: 16;
+  grid-area: body;
+}
+.truck .roof .side.top {
+  filter: brightness(102%);
+}
+
+.truck .windshield {
+  --width: 12;
+  --height: 30;
+  --depth: 30;
+  grid-area: front;
+}
+.truck .windshield .side {
+  box-shadow: unset;
+}
+.truck .windshield .side.top,
+.truck .windshield .side.front,
+.truck .windshield .side.back {
+  background-color: transparent;
+  filter: unset;
+}
+.truck .windshield .side.top::before {
+  content: var(--name, unset);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  font-size: var(--font-size, 4.5vmin);
+  text-shadow: var(--color-raised) -1px -1px 0, var(--color-raised) -2px -2px 0;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  text-align: center;
+  transform-origin: center bottom;
+  transform: rotate(-180deg) translateY(100%) translateX(10%) translateZ(1px);
+}
+.truck .windshield .side.top::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 135%;
+  height: 100%;
+  background-color: var(--color);
+  background-image: var(--color-window);
+  background-size: 50% 100%;
+  transform-origin: center left;
+  transform: rotateY(68deg);
+  filter: brightness(90%);
+  box-shadow: inset var(--unit) 0 0 var(--unit) var(--color);
+}
+.truck .windshield .side.right,
+.truck .windshield .side.left {
+  background-color: transparent;
+  filter: unset;
+}
+.truck .windshield .side.right::before,
+.truck .windshield .side.left::before {
+  --size: calc(var(--width) * var(--unit));
+  content: "";
+  position: absolute;
+  top: calc(var(--unit) * 2);
+  left: var(--unit);
+  width: calc(var(--size) / 1.25);
+  height: var(--size);
+  background: var(--color-window);
+  transform: translateZ(1px);
+  -webkit-clip-path: polygon(50% 0, 100% 100%, 0 100%, 0 0);
+          clip-path: polygon(50% 0, 100% 100%, 0 100%, 0 0);
+}
+.truck .windshield .side.bottom,
+.truck .windshield .side.back {
+  display: none;
+}
+
+.truck .hood {
+  --width: 6;
+  --height: 15;
+  --depth: 30;
+  --z: -7.5;
+  grid-area: hood;
+}
+.truck .hood .side.bottom,
+.truck .hood .side.back {
+  display: none;
+}
+.truck .hood .side.top::before {
+  content: var(--tagline, unset);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  font-family: var(--tagline-font);
+  font-style: italic;
+  font-size: 1.7vmin;
+  text-align: center;
+  transform-origin: center bottom;
+  transform: rotate(-180deg) translateY(100%) translateZ(1px);
+}
+.truck .hood .side.front::before, .truck .hood .side.front::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.truck .hood .side.front::before {
+  background: radial-gradient(ellipse at center, white 0%, white 10%, black 11%, black 15%, transparent 16%) repeat -66% 100%/70% 130%;
+}
+
+.truck .grill {
+  --width: 1;
+  --height: 6;
+  --depth: 10;
+  --z: -6;
+  grid-area: bumper;
+}
+
+.truck .bumper {
+  --width: 1;
+  --height: 4;
+  --depth: 30;
+  --z: -13;
+  grid-area: bumper;
+}
+
+.mirror {
+  --size: calc(var(--unit) * 4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.mirror::before, .mirror::after {
+  content: "";
+  position: absolute;
+  left: calc(100% - var(--unit) * 3);
+}
+.mirror::before {
+  top: 30%;
+  width: var(--size);
+  height: calc(var(--size) * 1.5);
+  background: var(--color);
+  transform: rotateY(80deg) translateX(-70%);
+  border-radius: 5px;
+}
+.mirror::after {
+  top: 40%;
+  width: calc(var(--unit) / 2);
+  height: calc(var(--unit) * 4);
+  background: black;
+  transform: rotateY(90deg) rotateZ(-55deg) translateX(-200%) translateZ(2vmin);
+}
+.mirror.left {
+  transform: translate(-50%, -50%) rotateX(-90deg) rotateY(180deg) translateZ(calc((var(--depth) / 2) * var(--unit))) scaleX(-1);
+}
+.mirror.right {
+  transform: translate(-50%, -50%) rotateX(-90deg) translateZ(calc((var(--depth) / 2) * var(--unit)));
+}
+
+.tires {
+  --size: calc(var(--unit) * 9);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+}
+.tires::before, .tires::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - var(--size) / 2);
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: radial-gradient(circle, white, white 40%, black 40%, black 100%);
+}
+.tires::before {
+  left: 25%;
+}
+.tires::after {
+  right: -20%;
+}
+.tires.left {
+  transform: translate(-50%, -50%) rotateX(-90deg) rotateY(180deg) translateZ(calc((var(--depth) / 2) * var(--unit))) scaleX(-1);
+}
+.tires.right {
+  transform: translate(-50%, -50%) rotateX(-90deg) translateZ(calc((var(--depth) / 2) * var(--unit)));
+}
+
+/* Animations */
+.title {
+  opacity: 0;
+  animation: fade 1s 400ms alternate forwards, fade 800ms 2.5s reverse forwards;
+}
+
+input[name=select-truck]:checked + label::before, input[name=select-truck]:checked + label::after {
+  -webkit-animation: 500ms linear infinite;
+          animation: 500ms linear infinite;
+}
+input[name=select-truck]:checked + label::before {
+  -webkit-animation-name: point-start;
+          animation-name: point-start;
+}
+input[name=select-truck]:checked + label::after {
+  -webkit-animation-name: point-end;
+          animation-name: point-end;
+}
+
+.scene {
+  opacity: 0;
+  -webkit-animation: fade 1s 3.2s ease forwards;
+          animation: fade 1s 3.2s ease forwards;
+}
+
+.truck {
+  --duration: 800ms;
+  transform: translate(-150vmin, -100vmin) rotateX(-95deg) rotateY(-25deg) rotateX(90deg);
+  -webkit-animation: drive-out var(--duration) cubic-bezier(0.5, 0, 0.75, 0.5) forwards;
+          animation: drive-out var(--duration) cubic-bezier(0.5, 0, 0.75, 0.5) forwards;
+}
+
+[id=select-taco]:checked ~ .scene #taco-truck,
+[id=select-pizza]:checked ~ .scene #pizza-truck,
+[id=select-calzones]:checked ~ .scene #calzones-truck,
+[id=select-burgers]:checked ~ .scene #burgers-truck,
+[id=select-ice-cream]:checked ~ .scene #ice-cream-truck,
+[id=select-cornballs]:checked ~ .scene #cornballs-truck {
+  -webkit-animation: drive-in var(--duration) calc(var(--duration) / 2) cubic-bezier(0.34, 1.1, 0.64, 1) forwards;
+          animation: drive-in var(--duration) calc(var(--duration) / 2) cubic-bezier(0.34, 1.1, 0.64, 1) forwards;
+}
+
+@-webkit-keyframes drive-in {
+  from {
+    transform: translate(-100vw, -100vmin) rotateX(-45deg) rotateY(-15deg) rotateX(90deg);
+  }
+  to {
+    transform: translate(0, 0) rotateX(-45deg) rotateY(-45deg) rotateX(90deg);
+  }
+}
+
+@keyframes drive-in {
+  from {
+    transform: translate(-100vw, -100vmin) rotateX(-45deg) rotateY(-15deg) rotateX(90deg);
+  }
+  to {
+    transform: translate(0, 0) rotateX(-45deg) rotateY(-45deg) rotateX(90deg);
+  }
+}
+@-webkit-keyframes drive-out {
+  from {
+    transform: translate(0, 0) rotateX(-45deg) rotateY(-45deg) rotateX(90deg);
+  }
+  to {
+    transform: translate(140vw, 60vmin) rotateX(0) rotateY(0) rotateX(90deg);
+  }
+}
+@keyframes drive-out {
+  from {
+    transform: translate(0, 0) rotateX(-45deg) rotateY(-45deg) rotateX(90deg);
+  }
+  to {
+    transform: translate(140vw, 60vmin) rotateX(0) rotateY(0) rotateX(90deg);
+  }
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes point-start {
+  50% {
+    transform: rotate(30deg) translate(-2px, 0);
+  }
+}
+@keyframes point-start {
+  50% {
+    transform: rotate(30deg) translate(-2px, 0);
+  }
+}
+@-webkit-keyframes point-end {
+  50% {
+    transform: rotate(-30deg) scaleX(-1) translate(-2px, 0);
+  }
+}
+@keyframes point-end {
+  50% {
+    transform: rotate(-30deg) scaleX(-1) translate(-2px, 0);
+  }
+}
