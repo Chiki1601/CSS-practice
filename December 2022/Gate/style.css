@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,600,700");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  background: #F9F5EA;
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.gate {
+  position: relative;
+  width: 250px;
+  height: 140px;
+}
+
+.upper,
+.pillar,
+.red,
+.red-two,
+.side-gate,
+.side-gate-two,
+.lantern,
+.desc {
+  position: absolute;
+}
+
+.upper {
+  z-index: 20;
+  width: 48vmin;
+  height: 5vmin;
+  background: #493E44;
+  border-radius: 1vmin 1vmin 10vmin 10vmin;
+}
+
+.red {
+  border-radius: 1vmin 1vmin 10vmin 10vmin;
+  z-index: 15;
+  background: #E04E4C;
+  width: 39vmin;
+  height: 5vmin;
+  top: 3vmin;
+  left: 4.5vmin;
+  box-shadow: inset 0 -0.5vmin 0 rgba(0, 0, 0, 0.1);
+}
+
+.red-two {
+  width: 45vmin;
+  height: 5vmin;
+  background: #E04E4C;
+  top: 11vmin;
+  left: 0.5vmin;
+  border-radius: 0.5vmin;
+  box-shadow: inset 0 -1vmin 0 rgba(0, 0, 0, 0.1);
+}
+.red-two:before {
+  z-index: 99;
+  position: absolute;
+  content: "";
+  background: #E04E4C;
+  width: 2vmin;
+  height: 4vmin;
+  top: -4vmin;
+  left: 22vmin;
+}
+
+.lantern {
+  background: #F25C54;
+  width: 7vmin;
+  height: 8vmin;
+  border-radius: 40%;
+  top: 17vmin;
+  left: 19.6vmin;
+}
+.lantern:before, .lantern:after {
+  position: absolute;
+  content: "";
+}
+.lantern:before {
+  z-index: -1;
+  width: 3vmin;
+  height: 3vmin;
+  border-radius: 100%;
+  background: #493E44;
+  top: -1vmin;
+  left: 2vmin;
+}
+.lantern:after {
+  z-index: -1;
+  background: #493E44;
+  width: 3vmin;
+  height: 2vmin;
+  top: 7vmin;
+  left: 2vmin;
+}
+
+.pillar {
+  z-index: 3;
+  width: 5vmin;
+  height: 36vmin;
+  background: #E04E4C;
+  left: 7vmin;
+  box-shadow: inset -0.5vmin 0 0 rgba(0, 0, 0, 0.1);
+}
+.pillar:before {
+  position: absolute;
+  content: "";
+  width: 7vmin;
+  height: 6vmin;
+  background: #493E44;
+  bottom: 0;
+  left: -1vmin;
+  border-radius: 1vmin;
+}
+
+.left {
+  left: 34vmin;
+}
+
+.side-gate, .side-gate-two {
+  z-index: 1;
+  width: 11vmin;
+  height: 2vmin;
+  background: #E04E4C;
+  left: -2vmin;
+  top: 23vmin;
+  border-radius: 0.5vmin;
+  box-shadow: inset 0 -0.5vmin 0 rgba(0, 0, 0, 0.1);
+}
+.side-gate:before, .side-gate-two:before, .side-gate:after, .side-gate-two:after {
+  position: absolute;
+  content: "";
+  border-radius: 0.5vmin;
+}
+.side-gate:before, .side-gate-two:before {
+  z-index: -1;
+  background: #E04E4C;
+  width: 2vmin;
+  height: 12vmin;
+  left: 3vmin;
+}
+.side-gate:after, .side-gate-two:after {
+  width: 9vmin;
+  height: 2vmin;
+  background: #493E44;
+  top: 11vmin;
+  left: 0.5vmin;
+}
+
+.side-gate-two {
+  left: 38vmin;
+}
+.side-gate-two:before {
+  left: 4vmin;
+}
+.side-gate-two:after {
+  left: 0;
+}
+
+.desc {
+  bottom: 5%;
+  right: 2%;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
