@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Food Trucks On Demand</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<input id="select-taco" name="select-truck" type="radio" value="taco" checked="checked"/>
+<label for="select-taco">taco</label>
+<input id="select-burgers" name="select-truck" type="radio" value="burgers"/>
+<label for="select-burgers">burgers</label>
+<input id="select-pizza" name="select-truck" type="radio" value="pizza"/>
+<label for="select-pizza">pizza</label>
+<input id="select-calzones" name="select-truck" type="radio" value="calzones"/>
+<label for="select-calzones">calzones</label>
+<input id="select-ice-cream" name="select-truck" type="radio" value="ice-cream"/>
+<label for="select-ice-cream">ice-cream</label>
+<input id="select-cornballs" name="select-truck" type="radio" value="cornballs"/>
+<label for="select-cornballs">cornballs</label>
+<h1 class="title">Food Trucks<span>On Demand</span></h1>
+<div class="scene">
+  <div class="truck" id="taco-truck">
+    <div class="cuboid body">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+      <div class="tires right"></div>
+      <div class="tires left"></div>
+    </div>
+    <div class="cuboid concession-window">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid countertop">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid menu">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid roof">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid windshield">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+      <div class="mirror right"></div>
+      <div class="mirror left"></div>
+    </div>
+    <div class="cuboid hood">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid grill">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid bumper">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+  </div>
+  <div class="truck" id="burgers-truck">
+    <div class="cuboid body">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+      <div class="tires right"></div>
+      <div class="tires left"></div>
+    </div>
+    <div class="cuboid concession-window">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid countertop">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid menu">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid roof">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid windshield">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+      <div class="mirror right"></div>
+      <div class="mirror left"></div>
+    </div>
+    <div class="cuboid hood">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid grill">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid bumper">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+  </div>
+  <div class="truck" id="pizza-truck">
+    <div class="cuboid body">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+      <div class="tires right"></div>
+      <div class="tires left"></div>
+    </div>
+    <div class="cuboid concession-window">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid countertop">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid menu">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid roof">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid windshield">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+      <div class="mirror right"></div>
+      <div class="mirror left"></div>
+    </div>
+    <div class="cuboid hood">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid grill">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid bumper">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+  </div>
+  <div class="truck" id="calzones-truck">
+    <div class="cuboid body">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+      <div class="tires right"></div>
+      <div class="tires left"></div>
+    </div>
+    <div class="cuboid concession-window">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid countertop">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid menu">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid roof">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid windshield">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+      <div class="mirror right"></div>
+      <div class="mirror left"></div>
+    </div>
+    <div class="cuboid hood">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid grill">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid bumper">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+  </div>
+  <div class="truck" id="ice-cream-truck">
+    <div class="cuboid body">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+      <div class="tires right"></div>
+      <div class="tires left"></div>
+    </div>
+    <div class="cuboid concession-window">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid countertop">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid menu">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid roof">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid windshield">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+      <div class="mirror right"></div>
+      <div class="mirror left"></div>
+    </div>
+    <div class="cuboid hood">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid grill">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid bumper">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+  </div>
+  <div class="truck" id="cornballs-truck">
+    <div class="cuboid body">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+      <div class="tires right"></div>
+      <div class="tires left"></div>
+    </div>
+    <div class="cuboid concession-window">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid countertop">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid menu">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid roof">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid windshield">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+      <div class="mirror right"></div>
+      <div class="mirror left"></div>
+    </div>
+    <div class="cuboid hood">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid grill">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+    <div class="cuboid bumper">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side right"></div>
+      <div class="side left"></div>
+      <div class="side top"></div>
+      <div class="side bottom"></div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
