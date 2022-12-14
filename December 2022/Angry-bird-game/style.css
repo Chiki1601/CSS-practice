@@ -1,0 +1,204 @@
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+body {
+  background: url(https://i.pinimg.com/originals/3e/86/0d/3e860d2e061e24f4309a98a3bc16028a.jpg) no-repeat center;
+  background-size: cover;
+  cursor: crosshair;
+  overflow: hidden;
+}
+
+body:active .duck:active {
+  box-shadow: red 0px 0px 0px 3000px;
+}
+
+h2 {
+  position: absolute;
+  font-family: sans-serif;
+  top: 0px;
+  text-align: center;
+  left: 0px;
+  right: 0px;
+  padding: 5%;
+}
+
+.duck {
+  position: absolute;
+  left: -150px;
+  right: 0px;
+  height: 0px;
+  border-radius: 100%;
+  z-index: 10;
+  transform: translateZ(0);
+}
+.duck a {
+  display: block;
+  cursor: crosshair;
+  transition: all 0.6s;
+  background: no-repeat center url(http://icons.iconarchive.com/icons/femfoyou/angry-birds/1024/angry-bird-icon.png);
+  background-size: cover;
+}
+.duck a:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.duck:nth-child(1) {
+  top: 51%;
+  -webkit-animation: fly 14s 16.8s linear infinite;
+          animation: fly 14s 16.8s linear infinite;
+}
+.duck:nth-child(1) a {
+  width: 90px;
+  -webkit-animation: float 3.5s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+          animation: float 3.5s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+}
+
+.duck:nth-child(2) {
+  top: 53%;
+  -webkit-animation: fly 12s 2.6s linear infinite;
+          animation: fly 12s 2.6s linear infinite;
+}
+.duck:nth-child(2) a {
+  width: 138px;
+  -webkit-animation: float 2.6s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+          animation: float 2.6s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+}
+
+.duck:nth-child(3) {
+  top: 49%;
+  -webkit-animation: fly 11s 0.3s linear infinite;
+          animation: fly 11s 0.3s linear infinite;
+}
+.duck:nth-child(3) a {
+  width: 89px;
+  -webkit-animation: float 2.8s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+          animation: float 2.8s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+}
+
+.duck:nth-child(4) {
+  top: 37%;
+  -webkit-animation: fly 7s 0.9s linear infinite;
+          animation: fly 7s 0.9s linear infinite;
+}
+.duck:nth-child(4) a {
+  width: 108px;
+  -webkit-animation: float 2.9s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+          animation: float 2.9s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+}
+
+.duck:nth-child(5) {
+  top: 48%;
+  -webkit-animation: fly 7s 19.8s linear infinite;
+          animation: fly 7s 19.8s linear infinite;
+}
+.duck:nth-child(5) a {
+  width: 82px;
+  -webkit-animation: float 3.2s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+          animation: float 3.2s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+}
+
+.duck:nth-child(6) {
+  top: 15%;
+  -webkit-animation: fly 7s 13.5s linear infinite;
+          animation: fly 7s 13.5s linear infinite;
+}
+.duck:nth-child(6) a {
+  width: 132px;
+  -webkit-animation: float 1.6s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+          animation: float 1.6s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+}
+
+.duck:nth-child(7) {
+  top: 10%;
+  -webkit-animation: fly 8s 7.2s linear infinite;
+          animation: fly 8s 7.2s linear infinite;
+}
+.duck:nth-child(7) a {
+  width: 110px;
+  -webkit-animation: float 2.1s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+          animation: float 2.1s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+}
+
+.duck:nth-child(8) {
+  top: 55%;
+  -webkit-animation: fly 8s 7.5s linear infinite;
+          animation: fly 8s 7.5s linear infinite;
+}
+.duck:nth-child(8) a {
+  width: 98px;
+  -webkit-animation: float 3.2s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+          animation: float 3.2s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+}
+
+.duck:nth-child(9) {
+  top: 58%;
+  -webkit-animation: fly 14s 0.6s linear infinite;
+          animation: fly 14s 0.6s linear infinite;
+}
+.duck:nth-child(9) a {
+  width: 114px;
+  -webkit-animation: float 1.7s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+          animation: float 1.7s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+}
+
+.duck:nth-child(10) {
+  top: 60%;
+  -webkit-animation: fly 14s 5.2s linear infinite;
+          animation: fly 14s 5.2s linear infinite;
+}
+.duck:nth-child(10) a {
+  width: 124px;
+  -webkit-animation: float 3s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+          animation: float 3s infinite cubic-bezier(0.58, 0.14, 0.46, 0.92);
+}
+
+@-webkit-keyframes fly {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes float {
+  0% {
+    transform: translateY(40%);
+  }
+  50% {
+    transform: translateY(-40%);
+  }
+  100% {
+    transform: translateY(40%);
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(40%);
+  }
+  50% {
+    transform: translateY(-40%);
+  }
+  100% {
+    transform: translateY(40%);
+  }
+}
+.duck:target {
+  -webkit-animation: none;
+          animation: none;
+}
