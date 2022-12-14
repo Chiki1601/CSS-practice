@@ -1,0 +1,259 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e17074;
+  font-family: "Times New Roman", serif;
+  overflow: hidden;
+}
+
+.canvas {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: bottom center;
+  animation: 5s wave infinite linear;
+}
+
+.ruler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 100%;
+  background-color: #efc461;
+  border-radius: 3px;
+  overflow: hidden;
+  animation: 5s ruler infinite ease-in-out;
+}
+
+.ruler:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  background-color: #d3af56;
+}
+
+.ruler:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 19px;
+  width: 12px;
+  height: 12px;
+  background-color: #e17074;
+  border-radius: 50%;
+}
+
+.triangle {
+  position: absolute;
+  top: 0;
+  left: 55px;
+  border-bottom: 150px solid #c74c45;
+  border-top: 150px solid transparent;
+  border-left: 115px solid #c74c45;
+  border-right: 115px solid transparent;
+  border-radius: 2px;
+  animation: 5s triangle infinite ease-in-out;
+}
+
+.triangle:before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: -115px;
+  border-left: 100px solid #dd574b;
+  border-top: 300px solid transparent;
+}
+
+.triangle:after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -76px;
+  border-left: 53px solid #e17074;
+  border-top: 70px solid transparent;
+  border-right: 53px solid transparent;
+  border-bottom: 70px solid #e17074;
+}
+
+.protractor {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 220px;
+  height: 220px;
+  background: linear-gradient(#1a576a 50%, transparent 50%);
+  border-radius: 50%;
+  transform: rotate(52deg);
+  overflow: hidden;
+  animation: 5s protractor infinite ease-in-out;
+}
+
+.protractor:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  background-color: #12455a;
+}
+
+.protractor:after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 37px;
+  width: 145px;
+  height: 145px;
+  background: linear-gradient(#e17074 35%, transparent 35%);
+  border-radius: 50%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+}
+
+ul li {
+  width: 14px;
+  margin-bottom: 3px;
+  border-bottom: 2px solid #555;
+}
+
+ul li:nth-child(5n) {
+  width: 21px;
+}
+
+.ruler ul {
+  margin: 9px 0;
+}
+
+.triangle ul {
+  top: -120px;
+  left: -115px;
+}
+
+.triangle ul:nth-child(2) {
+  transform: rotate(-90deg);
+  top: 37px;
+  left: -12px;
+}
+
+.triangle ul li {
+  border-bottom-color: #74332d;
+}
+
+.protractor ul {
+  top: 0px;
+  left: 105px;
+  transform: rotate(-90deg);
+}
+
+.protractor ul li {
+  width: 9px;
+  border-bottom: 2px solid #ddd;
+}
+
+.protractor ul li:nth-child(5n) {
+  width: 16px;
+}
+
+.sailor {
+  position: absolute;
+  top: 110px;
+  left: 45px;
+  width: 23px;
+  height: 0;
+  background: linear-gradient(#75b8d6 55%, #fff 55%, #fff 60%, #f3d5b7 60%);
+  border: 5px solid #e17074;
+  border-bottom-color: #fff;
+  border-top-width: 0;
+  overflow: hidden;
+  animation: 5s sailor infinite ease-in-out;
+}
+
+.sailor span {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  font-weight: bold;
+  transform: rotate(-90deg);
+}
+
+@keyframes ruler {
+  0%,
+  40%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50%,
+  90% {
+    transform: translate(100px, 0px) rotate(180deg);
+  }
+}
+
+@keyframes triangle {
+  0%,
+  40%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50%,
+  90% {
+    transform: translate(-10px, -40px) rotate(127deg);
+  }
+}
+
+@keyframes protractor {
+  0%,
+  40%,
+  100% {
+    transform: rotate(52deg);
+  }
+  50%,
+  90% {
+    transform: translate(-60px, 100px) rotate(180deg);
+  }
+}
+
+@keyframes wave {
+  0%,
+  50%,
+  100% {
+    transform: rotate(0deg);
+  }
+  60%,
+  80% {
+    transform: rotate(10deg);
+  }
+  70%,
+  90% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes sailor {
+  0%,
+  50%,
+  90%,
+  100% {
+    height: 0;
+    border-bottom-width: 0;
+  }
+  55%,
+  85% {
+    height: 50px;
+    border-bottom-width: 5px;
+  }
+}
