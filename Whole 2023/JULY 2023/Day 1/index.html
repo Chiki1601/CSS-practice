@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(Day1)Input Text Field Character Counter in Vanilla Javascript</title>
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,30,400,500,600,700,800,900&displa=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-color: blue;
+}
+.container{
+    position:relative ;
+    width:500px ;
+    background: #fff ;
+    padding: 20px 80px 20px 20px;
+    box-shadow: 0 15px 25px rgba(0, 0,0, 0.1);
+
+}
+.container .textbx{
+    width: 100%;
+    outline:none ;
+    padding: 12px;
+    border: 2px solid #ec0e64;
+    color:  #ec0e64;
+    font-size: 1.35em;
+
+}
+.container .textbx::placeholder{
+    color:rgb(214, 212, 212);
+}
+.container .counter{
+    position: absolute;
+    
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 60px ;
+    height: 60px ;
+    background:  #ec0e64 ;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+   </style>
+   
+</head>
+<body>
+    <div class="container">
+        <input type="text" placeholder="Enter your name!"
+          required class = "textbx" maxlength="24">
+       <span class="counter">24</span>
+    </div>
+    <script>
+        let textbx = document.querySelector('.textbx');
+        let counter = document.querySelector('.counter');
+        maxlength = textbx.getAttribute("maxlength");
+        textbx.onkeyup=() =>{
+         counter.innerText = maxlength - textbx.value.length;
+        }
+        </script>
+</body>
+
+</html>
